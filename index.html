@@ -1,24 +1,83 @@
 <!DOCTYPE>
 <html>
     <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
         <style>
             #particles-js{
                 width: 100%;
-                height: 100%;
+                height: 300%;
                 background-color: #021748;
                 background-image: url('');
                 background-size: cover;
                 background-position: 50% 50%;
                 background-repeat: no-repeat;
                 position: absolute;
+                z-index: -1;
             }
+            #mainSVG-BG{
+                width:60%;
+                height:90%;
+                z-index:10!important;
+                margin:auto;
+                /* background-color: rgba(255, 255, 255, 0.27); */
+            }
+            #Display-buttons-group{
+                position:absolute;
+                left:20px;
+                top:300px;
+                z-index:20;
+            }
+            #disc-brake-front{
+                /*Chrome,Safari*/
+                -webkit-clip-path: polygon(317px 335px,325px 329px,332px 324px,336px 317px,341px 312px,344px 303px,341px 296px,337px 287px,330px 283px,318px 280px,315px 278px,311px 283px,302px 289px,298px 296px,292px 307px,292px 321px,298px 329px,312px 335px);
+                clip-path: polygon(317px 335px,325px 329px,332px 324px,336px 317px,341px 312px,344px 303px,341px 296px,337px 287px,330px 283px,318px 280px,315px 278px,311px 283px,302px 289px,298px 296px,292px 307px,292px 321px,298px 329px,312px 335px);
+                cursor: pointer;
+                
+            }
+            #disc-brake-front:hover{
+                filter: brightness(1.3) contrast(0.7);
+                /* transition: filter 0.5s; */
+            }
+            #front-tyre{
+                -webkit-clip-path: polygon(286px 255px,279px 256px,281px 259px,290px 263px,296px 275px,304px 292px,309px 288px,323px 285px,331px 287px,337px 294px,342px 309px,339px 314px,331px 321px,328px 327px,319px 330px,309px 333px,303px 329px,298px 320px,295px 315px,298px 304px,301px 297px,296px 284px,292px 271px,287px 264px,276px 260px,268px 271px,258px 287px,254px 299px,254px 314px,256px 334px,269px 351px,288px 363px,315px 367px,333px 361px,351px 344px,362px 324px,367px 302px,360px 277px,348px 261px,337px 255px,323px 249px,307px 247px,289px 252px);
+                clip-path: polygon(286px 255px,279px 256px,281px 259px,290px 263px,296px 275px,304px 292px,309px 288px,323px 285px,331px 287px,337px 294px,342px 309px,339px 314px,331px 321px,328px 327px,319px 330px,309px 333px,303px 329px,298px 320px,295px 315px,298px 304px,301px 297px,296px 284px,292px 271px,287px 264px,276px 260px,268px 271px,258px 287px,254px 299px,254px 314px,256px 334px,269px 351px,288px 363px,315px 367px,333px 361px,351px 344px,362px 324px,367px 302px,360px 277px,348px 261px,337px 255px,323px 249px,307px 247px,289px 252px);
+                cursor: pointer;
+            }
+            
     
         </style>
+        <script>
+            function modifyDisplayContents(className){
+                $(".sys").fadeOut(500);
+                $("."+className).fadeIn(250);
+            }
+        </script>
     </head>
     <body style="width:100%;height:100%;padding:0;margin:0" >
-        <div id="particles-js"></div>
-        <div style="width:500px;height:200px;">
-            
+        <div id="particles-js"></div>        
+        <div id="mainSVG-BG">
+            <svg width="100%" height="100%">
+                <image id="base-car" class="base-car sys" x="5%" y="5%" width="90%" xlink:href="assets/images/base-car.png" />
+                <image id="cooling-sys" class="cooling-sys sys" x="5%" y="5%" width="90%" xlink:href="assets/images/Cooling-System.png" style="display:none;" />
+
+                <image id="suspension-braking-sys" class="suspension-braking-sys sys" x="5%" y="5%" width="90%" xlink:href="assets/images/suspension-only.png" style="display:none;"/>
+                <image id="disc-brake-front" class="suspension-braking-sys sys" x="5%" y="5%" width="90%" xlink:href="assets/images/disc-brake-front.png" style="display:none;"/>
+                <image id="front-tyre" class="suspension-braking-sys sys" x="5%" y="5%" width="90%" xlink:href="assets/images/Front-Tyre.png" style="display:none;"/>
+            </svg>
+        </div>
+
+        <div id="Display-buttons-group" class="btn-group-vertical">            
+            <button type="button" class="btn btn-primary" onclick="modifyDisplayContents('base-car')">Dive Out</button>
+            <button type="button" class="btn btn-primary" onclick="modifyDisplayContents('cooling-sys')">Cooling System</button>
+            <button type="button" class="btn btn-primary" onclick="modifyDisplayContents('suspension-braking-sys')">Suspension and Braking System</button>
         </div>
 
         <script src="Particles/particles.js"></script>
