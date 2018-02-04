@@ -1,0 +1,23 @@
+<div id="particles-js"></div>
+<div class="row">
+    <div id="mainSVG-BG" class="col-md-6 col-md-push-2">
+        <svg width="100%" height="100%">
+            <image id="base-car" [ngClass]="{beingDisplayed: dispMode=='Sys', notbeingDisplayed: dispMode!='Sys', otherCSSClass:otherProperty}" class="base-car sys" x="5%" y="5%" width="90%" xlink:href="../assets/images/base-car.png" />
+            <image id="cooling-sys" [ngClass]="{beingDisplayed: dispMode=='CoolSys', notbeingDisplayed: dispMode!='CoolSys', otherCSSClass:otherProperty}" class="cooling-sys sys" x="5%" y="5%" width="90%" xlink:href="../assets/images/Cooling-System.png" />
+    
+            <image id="suspension-braking-sys" [ngClass]="{beingDisplayed: dispMode=='SuspBreakSys', notbeingDisplayed: dispMode!='SuspBreakSys', otherCSSClass:otherProperty}" class="suspension-braking-sys sys" x="5%" y="5%" width="90%" xlink:href="../assets/images/suspension-only.png"/>            
+            <image id="disc-brake-front_active" [ngClass]="{beingDisplayed: dispMode=='SuspBreakSys', notbeingDisplayed: dispMode!='SuspBreakSys', otherCSSClass:otherProperty}" class="suspension-braking-sys sys" x="5%" y="5%" width="90%" xlink:href="../assets/images/disc-brake-front_active.png"/>
+            <image id="front-tyre_active" [ngClass]="{beingDisplayed: dispMode=='SuspBreakSys', notbeingDisplayed: dispMode!='SuspBreakSys', otherCSSClass:otherProperty}" class="suspension-braking-sys sys" x="5%" y="5%" width="90%" xlink:href="../assets/images/Front-Tyre_active.png"/>
+            <image id="disc-brake-front" [ngClass]="{beingDisplayed: dispMode=='SuspBreakSys', notbeingDisplayed: dispMode!='SuspBreakSys', otherCSSClass:otherProperty}" class="suspension-braking-sys sys" x="5%" y="5%" width="90%" xlink:href="../assets/images/disc-brake-front.png"/>
+            <image id="front-tyre" [ngClass]="{beingDisplayed: dispMode=='SuspBreakSys', notbeingDisplayed: dispMode!='SuspBreakSys', otherCSSClass:otherProperty}" class="suspension-braking-sys sys" x="5%" y="5%" width="90%" xlink:href="../assets/images/Front-Tyre.png"/>
+        </svg>
+    </div>
+    <!-- <content-comp class="col-md-3"></content-comp> -->
+    <router-outlet class="col-md-3"></router-outlet>
+    
+    <div id="Display-buttons-group" class="btn-group-vertical">            
+        <button type="button" class="btn btn-primary" [disabled]="dispMode=='Sys'" (click)="modifyDisplayContents('Sys')">Dive Out</button>
+        <button type="button" class="btn btn-primary" [disabled]="dispMode=='CoolSys'" (click)="modifyDisplayContents('CoolSys')">Cooling System</button>
+        <button type="button" class="btn btn-primary" [disabled]="dispMode=='SuspBreakSys'" (click)="modifyDisplayContents('SuspBreakSys')">Suspension and Braking System</button>
+    </div>
+</div>

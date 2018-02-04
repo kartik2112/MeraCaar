@@ -1,0 +1,88 @@
+#particles-js{
+    width: 100%;
+    height: 100%;
+    background-color: #013161;
+    background-image: url('');
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+#particles-js{
+    width: 100%;
+    height: 300%;
+    background-color: #021748;
+    background-image: url('');
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: -1;
+}
+#mainSVG-BG{
+    width:60%;
+    height:600px;
+    z-index:10!important;
+    /* background-color: rgba(255, 255, 255, 0.27); */
+}
+#Display-buttons-group{
+    position:absolute;
+    left:20px;
+    top:300px;
+    z-index:20;
+}
+
+#disc-brake-front{
+    /*Chrome,Safari*/
+    -webkit-clip-path: polygon(317px 335px,325px 329px,332px 324px,336px 317px,341px 312px,344px 303px,341px 296px,337px 287px,330px 283px,318px 280px,315px 278px,311px 283px,302px 289px,298px 296px,292px 307px,292px 321px,298px 329px,312px 335px);
+    clip-path: polygon(317px 335px,325px 329px,332px 324px,336px 317px,341px 312px,344px 303px,341px 296px,337px 287px,330px 283px,318px 280px,315px 278px,311px 283px,302px 289px,298px 296px,292px 307px,292px 321px,298px 329px,312px 335px);
+    cursor: pointer;
+    
+}
+#disc-brake-front_active{
+    /*Chrome,Safari*/
+    -webkit-clip-path: polygon(317px 335px,325px 329px,332px 324px,336px 317px,341px 312px,344px 303px,341px 296px,337px 287px,330px 283px,318px 280px,315px 278px,311px 283px,302px 289px,298px 296px,292px 307px,292px 321px,298px 329px,312px 335px);
+    clip-path: polygon(317px 335px,325px 329px,332px 324px,336px 317px,341px 312px,344px 303px,341px 296px,337px 287px,330px 283px,318px 280px,315px 278px,311px 283px,302px 289px,298px 296px,292px 307px,292px 321px,298px 329px,312px 335px);
+    cursor: pointer;
+    
+}
+
+#disc-brake-front:hover{
+    opacity: 0.0;
+    transition: all 0.25s
+}
+
+#front-tyre{
+    -webkit-clip-path: polygon(281px 270px,297px 278px,304px 284px,298px 290px,293px 301px,293px 310px,296px 318px,299px 324px,309px 328px,320px 321px,326px 315px,333px 309px,336px 302px,333px 290px,324px 280px,314px 280px,305px 283px,298px 274px,285px 267px,269px 264px,276px 257px,273px 253px,274px 251px,278px 252px,283px 250px,291px 246px,308px 246px,325px 250px,341px 258px,348px 262px,352px 267px,357px 283px,358px 304px,351px 323px,347px 335px,339px 341px,324px 354px,305px 358px,289px 354px,274px 346px,263px 339px,257px 328px,253px 320px,253px 307px,252px 297px,256px 295px,257px 289px,262px 277px,267px 272px);
+    clip-path: polygon(281px 270px,297px 278px,304px 284px,298px 290px,293px 301px,293px 310px,296px 318px,299px 324px,309px 328px,320px 321px,326px 315px,333px 309px,336px 302px,333px 290px,324px 280px,314px 280px,305px 283px,298px 274px,285px 267px,269px 264px,276px 257px,273px 253px,274px 251px,278px 252px,283px 250px,291px 246px,308px 246px,325px 250px,341px 258px,348px 262px,352px 267px,357px 283px,358px 304px,351px 323px,347px 335px,339px 341px,324px 354px,305px 358px,289px 354px,274px 346px,263px 339px,257px 328px,253px 320px,253px 307px,252px 297px,256px 295px,257px 289px,262px 277px,267px 272px);
+    cursor: pointer;
+}
+
+#front-tyre_active{
+    -webkit-clip-path: polygon(281px 270px,297px 278px,304px 284px,298px 290px,293px 301px,293px 310px,296px 318px,299px 324px,309px 328px,320px 321px,326px 315px,333px 309px,336px 302px,333px 290px,324px 280px,314px 280px,305px 283px,298px 274px,285px 267px,269px 264px,276px 257px,273px 253px,274px 251px,278px 252px,283px 250px,291px 246px,308px 246px,325px 250px,341px 258px,348px 262px,352px 267px,357px 283px,358px 304px,351px 323px,347px 335px,339px 341px,324px 354px,305px 358px,289px 354px,274px 346px,263px 339px,257px 328px,253px 320px,253px 307px,252px 297px,256px 295px,257px 289px,262px 277px,267px 272px);
+    clip-path: polygon(281px 270px,297px 278px,304px 284px,298px 290px,293px 301px,293px 310px,296px 318px,299px 324px,309px 328px,320px 321px,326px 315px,333px 309px,336px 302px,333px 290px,324px 280px,314px 280px,305px 283px,298px 274px,285px 267px,269px 264px,276px 257px,273px 253px,274px 251px,278px 252px,283px 250px,291px 246px,308px 246px,325px 250px,341px 258px,348px 262px,352px 267px,357px 283px,358px 304px,351px 323px,347px 335px,339px 341px,324px 354px,305px 358px,289px 354px,274px 346px,263px 339px,257px 328px,253px 320px,253px 307px,252px 297px,256px 295px,257px 289px,262px 277px,267px 272px);
+    cursor: pointer;
+}
+
+#front-tyre:hover{
+    opacity: 0.0;
+    transition: all 0.25s
+}
+
+
+.sys{
+    transition: opacity 1s;
+    cursor:default;
+}
+
+.beingDisplayed{
+    /* display:block; */
+    opacity: 1.0;
+    transition: opacity 0.5s;
+}
+
+.notbeingDisplayed{
+    opacity: 0.0;
+    /* display: none; */
+    transition: opacity 0.5s;
+}
