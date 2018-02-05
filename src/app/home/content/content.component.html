@@ -1,0 +1,36 @@
+<div class="card" style="width:450px;margin-left:-30px;margin-top:80px;">
+    <div class="card-img-top">
+        <iframe style="width:70%;margin-left:15%;margin-top:10px;height:180px;" 
+            [src]="_videoSafeUrl" 
+            frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+        </iframe>
+        <!-- References: 
+            https://stackoverflow.com/a/36113208
+            https://stackoverflow.com/a/36113208
+            https://stackoverflow.com/a/39429498/5370202
+        -->
+    </div>
+    <div *ngIf="_errorStr">
+        <div class="alert alert-danger">{{ _errorStr }}</div>
+    </div>
+    <div class="card-body" style="padding-top: 0px;">
+        <h4 class="card-title">{{ _data.elemName }}</h4>
+        <div id="custom-scrollbar" style="height:270px; overflow-y: scroll;font-size: x-small">
+            <p class="card-text" style="" [innerHTML]="_data.explanation"></p>
+            <!-- Reference: https://stackoverflow.com/a/38279651-->
+            <h5>References:</h5>
+            <ul>
+                <li *ngFor="let ref1 of _data.references">
+                    <a [href]="ref1" target="_blank">{{ ref1 }}</a>
+                </li>
+            </ul>
+            <div class="force-overflow"></div>
+            <!-- Reference to Custom Toolbar: https://codepen.io/devstreak/pen/dMYgeO -->
+        </div>        
+    </div>
+</div>
+<div class="card" style="position:absolute;bottom:0px;right:490px;width:fit-content;margin-left:-30px;margin-top:150px;">
+    <div class="card-img-top">
+        <img style="height:200px" [src]="_data.sampleImageUrl"/>
+    </div>
+</div>

@@ -11,13 +11,9 @@ declare var particlesJS: any;
 
 
 export class AppComponent implements OnInit  {
-  private dispMode:string = "Sys"
   
   public ngOnInit() {
     particlesJS.load('particles-js', 'particles.json', null);
   }
 
-  public modifyDisplayContents(selectMode:string){
-    this.dispMode = selectMode;
-  }
 }
