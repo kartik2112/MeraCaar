@@ -179,3 +179,43 @@ So, I replaced the image in that site using inspect and set the image size to th
     opacity: 0.0;
     transition: all 0.1s
 }
+
+
+
+#FWD-suspension{
+    -webkit-clip-path: polygon(267px 297px,288px 310px,291px 306px,290px 297px,279px 291px,268px 288px,267px 280px,258px 278px,259px 270px,269px 267px,270px 276px,275px 277px,283px 287px,298px 293px,304px 291px,304px 283px,296px 277px,298px 291px,288px 287px,284px 272px,272px 272px,268px 266px,278px 265px,275px 260px,274px 251px,271px 239px,269px 231px,272px 222px,276px 215px,283px 210px,289px 215px,295px 216px,296px 226px,298px 226px,297px 236px,301px 238px,299px 243px,300px 245px,300px 250px,305px 259px,318px 272px,331px 271px,321px 289px,321px 305px,318px 314px,302px 314px,291px 321px,263px 302px);
+    clip-path: polygon(267px 297px,288px 310px,291px 306px,290px 297px,279px 291px,268px 288px,267px 280px,258px 278px,259px 270px,269px 267px,270px 276px,275px 277px,283px 287px,298px 293px,304px 291px,304px 283px,296px 277px,298px 291px,288px 287px,284px 272px,272px 272px,268px 266px,278px 265px,275px 260px,274px 251px,271px 239px,269px 231px,272px 222px,276px 215px,283px 210px,289px 215px,295px 216px,296px 226px,298px 226px,297px 236px,301px 238px,299px 243px,300px 245px,300px 250px,305px 259px,318px 272px,331px 271px,321px 289px,321px 305px,318px 314px,302px 314px,291px 321px,263px 302px);
+    cursor: pointer;
+}
+
+#FWD-suspension_active{
+    -webkit-clip-path: polygon(267px 297px,288px 310px,291px 306px,290px 297px,279px 291px,268px 288px,267px 280px,258px 278px,259px 270px,269px 267px,270px 276px,275px 277px,283px 287px,298px 293px,304px 291px,304px 283px,296px 277px,298px 291px,288px 287px,284px 272px,272px 272px,268px 266px,278px 265px,275px 260px,274px 251px,271px 239px,269px 231px,272px 222px,276px 215px,283px 210px,289px 215px,295px 216px,296px 226px,298px 226px,297px 236px,301px 238px,299px 243px,300px 245px,300px 250px,305px 259px,318px 272px,331px 271px,321px 289px,321px 305px,318px 314px,302px 314px,291px 321px,263px 302px);
+    clip-path: polygon(267px 297px,288px 310px,291px 306px,290px 297px,279px 291px,268px 288px,267px 280px,258px 278px,259px 270px,269px 267px,270px 276px,275px 277px,283px 287px,298px 293px,304px 291px,304px 283px,296px 277px,298px 291px,288px 287px,284px 272px,272px 272px,268px 266px,278px 265px,275px 260px,274px 251px,271px 239px,269px 231px,272px 222px,276px 215px,283px 210px,289px 215px,295px 216px,296px 226px,298px 226px,297px 236px,301px 238px,299px 243px,300px 245px,300px 250px,305px 259px,318px 272px,331px 271px,321px 289px,321px 305px,318px 314px,302px 314px,291px 321px,263px 302px);
+    cursor: pointer;
+}
+
+#FWD-suspension:hover{
+    opacity: 0.0;
+    transition: all 0.1s
+}
+
+
+
+
+
+#RWD-suspension{
+    -webkit-clip-path: polygon(257px 307px,264px 295px,276px 302px,288px 310px,292px 307px,285px 293px,282px 276px,261px 271px,263px 263px,276px 265px,270px 260px,273px 257px,267px 224px,274px 210px,284px 210px,294px 218px,299px 244px,301px 253px,306px 254px,307px 263px,325px 268px,332px 276px,323px 282px,322px 295px,323px 301px,322px 313px,314px 331px,298px 322px,277px 313px,260px 312px);
+    clip-path: polygon(257px 307px,264px 295px,276px 302px,288px 310px,292px 307px,285px 293px,282px 276px,261px 271px,263px 263px,276px 265px,270px 260px,273px 257px,267px 224px,274px 210px,284px 210px,294px 218px,299px 244px,301px 253px,306px 254px,307px 263px,325px 268px,332px 276px,323px 282px,322px 295px,323px 301px,322px 313px,314px 331px,298px 322px,277px 313px,260px 312px);
+    cursor: pointer;
+}
+
+#RWD-suspension_active{
+    -webkit-clip-path: polygon(257px 307px,264px 295px,276px 302px,288px 310px,292px 307px,285px 293px,282px 276px,261px 271px,263px 263px,276px 265px,270px 260px,273px 257px,267px 224px,274px 210px,284px 210px,294px 218px,299px 244px,301px 253px,306px 254px,307px 263px,325px 268px,332px 276px,323px 282px,322px 295px,323px 301px,322px 313px,314px 331px,298px 322px,277px 313px,260px 312px);
+    clip-path: polygon(257px 307px,264px 295px,276px 302px,288px 310px,292px 307px,285px 293px,282px 276px,261px 271px,263px 263px,276px 265px,270px 260px,273px 257px,267px 224px,274px 210px,284px 210px,294px 218px,299px 244px,301px 253px,306px 254px,307px 263px,325px 268px,332px 276px,323px 282px,322px 295px,323px 301px,322px 313px,314px 331px,298px 322px,277px 313px,260px 312px);
+    cursor: pointer;
+}
+
+#RWD-suspension:hover{
+    opacity: 0.0;
+    transition: all 0.1s
+}

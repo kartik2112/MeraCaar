@@ -7,6 +7,20 @@
             <button type="button" class="btn btn-primary" [disabled]="dispMode=='FWD'" (click)="modifyDisplayContents('FWD')">Front Wheel Drive</button>
             <button type="button" class="btn btn-primary" [disabled]="dispMode=='RWD'" (click)="modifyDisplayContents('RWD')">Rear Wheel Drive</button>
         </div>
+        <div id="searchDiv" style="z-index:15">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="search..." (keydown)="updateSearchQuery(searchQS.value)" #searchQS/>
+                </div>
+                <div id="custom-scrollbar" class="col-centered" style="height:220px;margin:auto;width:100%;overflow-y:scroll;">            
+                    <li *ngFor="let comp of (_allCont | searchContentPipe:this._searchQueryStr)" >
+                            <a [routerLink]="['.',comp.elemCode]" >{{ comp.elemName }}</a>
+                    </li>
+                    <div class="force-overflow" style="max-height:220px!important;"></div>
+                </div>
+            <!-- <div>
+                <a *ngFor="let comp of (_allCont | searchContentPipe:this._searchQueryStr)" (click)="openComponent('radiator')">{{ comp.elemName }}</a><br/>
+            </div> -->
+        </div>
     </div>
     <div id="mainSVG-BG" class="col-md-7">
         <svg width="800" height="550">
@@ -14,27 +28,31 @@
 
             <image id="cooling-sys" [attr.visibility]="dispMode=='CoolSys'?'visible':'hidden'" [ngClass]="{beingDisplayed: dispMode=='CoolSys', notbeingDisplayed: dispMode!='CoolSys', otherCSSClass:otherProperty}" class="cooling-sys sys" x="5%" y="5%" width="90%" xlink:href="../assets/images/Cooling-System.png" />
             <image id="cooling-sys-radiator_active" [attr.visibility]="dispMode=='CoolSys'?'visible':'hidden'" [ngClass]="{beingDisplayed: dispMode=='CoolSys', notbeingDisplayed: dispMode!='CoolSys', otherCSSClass:otherProperty}" class="cooling-sys sys" x="5%" y="5%" width="90%" xlink:href="../assets/images/Cooling-System-radiator_active.png" />
-            <image id="cooling-sys-radiator" [attr.visibility]="dispMode=='CoolSys'?'visible':'hidden'" (click)="openComponent('radiator')" [ngClass]="{beingDisplayed: dispMode=='CoolSys', notbeingDisplayed: dispMode!='CoolSys', otherCSSClass:otherProperty}" class="cooling-sys sys" x="5%" y="5%" width="90%" xlink:href="../assets/images/Cooling-System-radiator.png" />
+            <image id="cooling-sys-radiator" [attr.visibility]="dispMode=='CoolSys'?'visible':'hidden'" (mouseenter)="playAudio('blop')" (click)="openComponent('radiator')" [ngClass]="{beingDisplayed: dispMode=='CoolSys', notbeingDisplayed: dispMode!='CoolSys', otherCSSClass:otherProperty}" class="cooling-sys sys" x="5%" y="5%" width="90%" xlink:href="../assets/images/Cooling-System-radiator.png" />
     
             <image id="suspension-braking-sys" [attr.visibility]="dispMode=='SuspBreakSys'?'visible':'hidden'" [ngClass]="{beingDisplayed: dispMode=='SuspBreakSys', notbeingDisplayed: dispMode!='SuspBreakSys', otherCSSClass:otherProperty}" class="suspension-braking-sys sys" x="5%" y="5%" width="90%" xlink:href="../assets/images/suspension-only.png"/>            
             <image id="disc-brake-front_active" [attr.visibility]="dispMode=='SuspBreakSys'?'visible':'hidden'" [ngClass]="{beingDisplayed: dispMode=='SuspBreakSys', notbeingDisplayed: dispMode!='SuspBreakSys', otherCSSClass:otherProperty}" class="suspension-braking-sys sys" x="5%" y="5%" width="90%" xlink:href="../assets/images/disc-brake-front_active.png"/>
-            <image id="disc-brake-front" [attr.visibility]="dispMode=='SuspBreakSys'?'visible':'hidden'" (click)="openComponent('discBrake')" [ngClass]="{beingDisplayed: dispMode=='SuspBreakSys', notbeingDisplayed: dispMode!='SuspBreakSys', otherCSSClass:otherProperty}" class="suspension-braking-sys sys" x="5%" y="5%" width="90%" xlink:href="../assets/images/disc-brake-front.png"/>
+            <image id="disc-brake-front" [attr.visibility]="dispMode=='SuspBreakSys'?'visible':'hidden'" (mouseenter)="playAudio('blop')" (click)="openComponent('discBrake')" [ngClass]="{beingDisplayed: dispMode=='SuspBreakSys', notbeingDisplayed: dispMode!='SuspBreakSys', otherCSSClass:otherProperty}" class="suspension-braking-sys sys" x="5%" y="5%" width="90%" xlink:href="../assets/images/disc-brake-front.png"/>
             <image id="front-tyre_active" [attr.visibility]="dispMode=='SuspBreakSys'?'visible':'hidden'" [ngClass]="{beingDisplayed: dispMode=='SuspBreakSys', notbeingDisplayed: dispMode!='SuspBreakSys', otherCSSClass:otherProperty}" class="suspension-braking-sys sys" x="5%" y="5%" width="90%" xlink:href="../assets/images/Front-Tyre_active.png"/>
-            <image id="front-tyre" [attr.visibility]="dispMode=='SuspBreakSys'?'visible':'hidden'" (click)="openComponent('tyres')" [ngClass]="{beingDisplayed: dispMode=='SuspBreakSys', notbeingDisplayed: dispMode!='SuspBreakSys', otherCSSClass:otherProperty}" class="suspension-braking-sys sys" x="5%" y="5%" width="90%" xlink:href="../assets/images/Front-Tyre.png"/>
+            <image id="front-tyre" [attr.visibility]="dispMode=='SuspBreakSys'?'visible':'hidden'" (mouseenter)="playAudio('blop')" (click)="openComponent('tyres')" [ngClass]="{beingDisplayed: dispMode=='SuspBreakSys', notbeingDisplayed: dispMode!='SuspBreakSys', otherCSSClass:otherProperty}" class="suspension-braking-sys sys" x="5%" y="5%" width="90%" xlink:href="../assets/images/Front-Tyre.png"/>
 
             <image id="FWD" [attr.visibility]="dispMode=='FWD'?'visible':'hidden'" [ngClass]="{beingDisplayed: dispMode=='FWD', notbeingDisplayed: dispMode!='FWD', otherCSSClass:otherProperty}" class="FWD sys" x="5%" y="5%" width="90%" xlink:href="../assets/images/FWD.png" />
             <image id="FWD-engine_active" [attr.visibility]="dispMode=='FWD'?'visible':'hidden'" [ngClass]="{beingDisplayed: dispMode=='FWD', notbeingDisplayed: dispMode!='FWD', otherCSSClass:otherProperty}" class="FWD sys" x="5%" y="5%" width="90%" xlink:href="../assets/images/FWD-engine_active.png" />
-            <image id="FWD-engine" [attr.visibility]="dispMode=='FWD'?'visible':'hidden'" (click)="openComponent('engineFWD')" [ngClass]="{beingDisplayed: dispMode=='FWD', notbeingDisplayed: dispMode!='FWD', otherCSSClass:otherProperty}" class="FWD sys" x="5%" y="5%" width="90%" xlink:href="../assets/images/FWD-engine.png" />
+            <image id="FWD-engine" [attr.visibility]="dispMode=='FWD'?'visible':'hidden'" (mouseenter)="playAudio('blop')" (click)="openComponent('engineFWD')" [ngClass]="{beingDisplayed: dispMode=='FWD', notbeingDisplayed: dispMode!='FWD', otherCSSClass:otherProperty}" class="FWD sys" x="5%" y="5%" width="90%" xlink:href="../assets/images/FWD-engine.png" />
             <image id="FWD-radiator_active" [attr.visibility]="dispMode=='FWD'?'visible':'hidden'" [ngClass]="{beingDisplayed: dispMode=='FWD', notbeingDisplayed: dispMode!='FWD', otherCSSClass:otherProperty}" class="FWD sys" x="5%" y="5%" width="90%" xlink:href="../assets/images/FWD-radiator_active.png" />
-            <image id="FWD-radiator" [attr.visibility]="dispMode=='FWD'?'visible':'hidden'" (click)="openComponent('radiator')" [ngClass]="{beingDisplayed: dispMode=='FWD', notbeingDisplayed: dispMode!='FWD', otherCSSClass:otherProperty}" class="FWD sys" x="5%" y="5%" width="90%" xlink:href="../assets/images/FWD-radiator.png" />
+            <image id="FWD-radiator" [attr.visibility]="dispMode=='FWD'?'visible':'hidden'" (mouseenter)="playAudio('blop')" (click)="openComponent('radiator')" [ngClass]="{beingDisplayed: dispMode=='FWD', notbeingDisplayed: dispMode!='FWD', otherCSSClass:otherProperty}" class="FWD sys" x="5%" y="5%" width="90%" xlink:href="../assets/images/FWD-radiator.png" />
+            <image id="FWD-suspension_active" [attr.visibility]="dispMode=='FWD'?'visible':'hidden'" [ngClass]="{beingDisplayed: dispMode=='FWD', notbeingDisplayed: dispMode!='FWD', otherCSSClass:otherProperty}" class="FWD sys" x="5%" y="5%" width="90%" xlink:href="../assets/images/FWD-suspension_active.png" />
+            <image id="FWD-suspension" [attr.visibility]="dispMode=='FWD'?'visible':'hidden'" (mouseenter)="playAudio('blop')" (click)="openComponent('suspensionFWD')" [ngClass]="{beingDisplayed: dispMode=='FWD', notbeingDisplayed: dispMode!='FWD', otherCSSClass:otherProperty}" class="FWD sys" x="5%" y="5%" width="90%" xlink:href="../assets/images/FWD-suspension.png" />
 
             <image id="RWD" [attr.visibility]="dispMode=='RWD'?'visible':'hidden'" [ngClass]="{beingDisplayed: dispMode=='RWD', notbeingDisplayed: dispMode!='RWD', otherCSSClass:otherProperty}" class="RWD sys" x="5%" y="5%" width="90%" xlink:href="../assets/images/RWD.png" />
             <image id="RWD-engine_active" [attr.visibility]="dispMode=='RWD'?'visible':'hidden'" [ngClass]="{beingDisplayed: dispMode=='RWD', notbeingDisplayed: dispMode!='RWD', otherCSSClass:otherProperty}" class="RWD sys" x="5%" y="5%" width="90%" xlink:href="../assets/images/RWD-engine_active.png" />
-            <image id="RWD-engine" [attr.visibility]="dispMode=='RWD'?'visible':'hidden'" (click)="openComponent('engineRWD')" [ngClass]="{beingDisplayed: dispMode=='RWD', notbeingDisplayed: dispMode!='RWD', otherCSSClass:otherProperty}" class="RWD sys" x="5%" y="5%" width="90%" xlink:href="../assets/images/RWD-engine.png" />
+            <image id="RWD-engine" [attr.visibility]="dispMode=='RWD'?'visible':'hidden'" (mouseenter)="playAudio('blop')" (click)="openComponent('engineRWD')" [ngClass]="{beingDisplayed: dispMode=='RWD', notbeingDisplayed: dispMode!='RWD', otherCSSClass:otherProperty}" class="RWD sys" x="5%" y="5%" width="90%" xlink:href="../assets/images/RWD-engine.png" />
             <image id="RWD-radiator_active" [attr.visibility]="dispMode=='RWD'?'visible':'hidden'" [ngClass]="{beingDisplayed: dispMode=='RWD', notbeingDisplayed: dispMode!='RWD', otherCSSClass:otherProperty}" class="RWD sys" x="5%" y="5%" width="90%" xlink:href="../assets/images/RWD-radiator_active.png" />
-            <image id="RWD-radiator" [attr.visibility]="dispMode=='RWD'?'visible':'hidden'" (click)="openComponent('radiator')" [ngClass]="{beingDisplayed: dispMode=='RWD', notbeingDisplayed: dispMode!='RWD', otherCSSClass:otherProperty}" class="RWD sys" x="5%" y="5%" width="90%" xlink:href="../assets/images/RWD-radiator.png" />
+            <image id="RWD-radiator" [attr.visibility]="dispMode=='RWD'?'visible':'hidden'" (mouseenter)="playAudio('blop')" (click)="openComponent('radiator')" [ngClass]="{beingDisplayed: dispMode=='RWD', notbeingDisplayed: dispMode!='RWD', otherCSSClass:otherProperty}" class="RWD sys" x="5%" y="5%" width="90%" xlink:href="../assets/images/RWD-radiator.png" />
             <image id="RWD-differential_active" [attr.visibility]="dispMode=='RWD'?'visible':'hidden'" [ngClass]="{beingDisplayed: dispMode=='RWD', notbeingDisplayed: dispMode!='RWD', otherCSSClass:otherProperty}" class="RWD sys" x="5%" y="5%" width="90%" xlink:href="../assets/images/RWD-differential_active.png" />
-            <image id="RWD-differential" [attr.visibility]="dispMode=='RWD'?'visible':'hidden'" (click)="openComponent('differential')" [ngClass]="{beingDisplayed: dispMode=='RWD', notbeingDisplayed: dispMode!='RWD', otherCSSClass:otherProperty}" class="RWD sys" x="5%" y="5%" width="90%" xlink:href="../assets/images/RWD-differential.png" />
+            <image id="RWD-differential" [attr.visibility]="dispMode=='RWD'?'visible':'hidden'" (mouseenter)="playAudio('blop')" (click)="openComponent('differential')" [ngClass]="{beingDisplayed: dispMode=='RWD', notbeingDisplayed: dispMode!='RWD', otherCSSClass:otherProperty}" class="RWD sys" x="5%" y="5%" width="90%" xlink:href="../assets/images/RWD-differential.png" />
+            <image id="RWD-suspension_active" [attr.visibility]="dispMode=='RWD'?'visible':'hidden'" [ngClass]="{beingDisplayed: dispMode=='RWD', notbeingDisplayed: dispMode!='RWD', otherCSSClass:otherProperty}" class="RWD sys" x="5%" y="5%" width="90%" xlink:href="../assets/images/RWD-suspension_active.png" />
+            <image id="RWD-suspension" [attr.visibility]="dispMode=='RWD'?'visible':'hidden'" (mouseenter)="playAudio('blop')" (click)="openComponent('suspensionRWD')" [ngClass]="{beingDisplayed: dispMode=='RWD', notbeingDisplayed: dispMode!='RWD', otherCSSClass:otherProperty}" class="RWD sys" x="5%" y="5%" width="90%" xlink:href="../assets/images/RWD-suspension.png" />
 
             
 			<defs>
@@ -49,6 +67,10 @@
             <!-- Reference: http://blogs.sitepointstatic.com/examples/tech/svg-curves/cubic-curve.html -->
             <!-- Reference: https://stackoverflow.com/a/38308005/5370202 -->
         </svg>
+        <audio src="../../assets/sounds/blop.mp3" #blop></audio>
+        <audio [src]="_childData.soundUrl" volume="0.2" #audio1 (change)="playAudio1()"></audio>
+        <!-- Site for editing audios: http://mp3cutter.toolur.com/ -->
+
     </div>
     <!-- <content-comp class="col-md-3"></content-comp> -->
     <div class="col-md-4" style="z-index:10">

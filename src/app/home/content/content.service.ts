@@ -30,8 +30,8 @@ export class ContentService{
                 'https://auto.howstuffworks.com/auto-parts/brakes/brake-types/disc-brake1.htm'
             ],
             arrow_tail_path_d:'M346,347 C286,437 350,475 455,486',
-            arrow_head_path_d:'M416,504 C500,469 482,511 440,442'
-
+            arrow_head_path_d:'M416,504 C500,469 482,511 440,442',
+            soundUrl: '../../assets/sounds/car-brake.mp3'
         },
         {
             elemCode: 'tyres',
@@ -71,7 +71,8 @@ export class ContentService{
                 'https://auto.howstuffworks.com/tire1.htm'
             ],
             arrow_tail_path_d:'M324,373 C286,437 350,475 515,496',
-            arrow_head_path_d:'M446,514 C530,479 512,521 470,452'
+            arrow_head_path_d:'M446,514 C530,479 512,521 470,452',
+            soundUrl: '../../assets/sounds/car-screech.mp3'
 
         },
 		{
@@ -91,7 +92,8 @@ export class ContentService{
                 'http://www.mechanicalbooster.com/2017/11/how-drum-brakes-work.html'
             ],
             arrow_tail_path_d:'M333,399 C282,459 316,491 382,487',
-            arrow_head_path_d:'M351,511 C436,481 388,522 376,460'
+            arrow_head_path_d:'M351,511 C436,481 388,522 376,460',
+            soundUrl: '../../assets/sounds/car-brake.mp3'
         },
 		{
             elemCode: 'radiator',
@@ -108,7 +110,8 @@ export class ContentService{
 				'https://www.howacarworks.com/basics/how-an-engine-cooling-system-works'
             ],
             arrow_tail_path_d:'M160,312 C84,377 192,462 397,498',
-            arrow_head_path_d:'M356,524 C440,489 422,531 380,462'
+            arrow_head_path_d:'M356,524 C440,489 422,531 380,462',
+            soundUrl: '../../assets/sounds/fan.mp3'
         },
 		{
             elemCode: 'engineRWD',
@@ -131,7 +134,8 @@ export class ContentService{
 				'https://www.briggsandstratton.com/na/en_us/support/videos/browse/4-cycle-theory.html'
             ],
             arrow_tail_path_d:'M244,339 C163,473 351,475 582,487',
-            arrow_head_path_d:'M551,511 C636,481 588,522 576,460'
+            arrow_head_path_d:'M551,511 C636,481 588,522 576,460',
+            soundUrl: '../../assets/sounds/engine-rev.mp3'
         },
         {
             elemCode: 'engineFWD',
@@ -154,7 +158,8 @@ export class ContentService{
 				'https://www.briggsandstratton.com/na/en_us/support/videos/browse/4-cycle-theory.html'
             ],
             arrow_tail_path_d:'M244,339 C163,473 351,475 582,487',
-            arrow_head_path_d:'M551,511 C636,481 588,522 576,460'
+            arrow_head_path_d:'M551,511 C636,481 588,522 576,460',
+            soundUrl: '../../assets/sounds/engine-rev.mp3'
         },
         {
             elemCode: 'differential',
@@ -183,7 +188,110 @@ export class ContentService{
 				'https://auto.howstuffworks.com/differential.htm'
             ],
             arrow_tail_path_d:'M504,229 C490,343 651,265 582,397',
-            arrow_head_path_d:'M555,357 C593,420 532,415 608,380'
+            arrow_head_path_d:'M555,357 C593,420 532,415 608,380',
+            soundUrl: '../../assets/sounds/differential.mp3'
+        },
+        {
+            elemCode: 'limitedSlipDifferential',
+            elemName: 'Limited Slip Diff. System',
+            parentGrpName: 'RWD',
+            youTubeUrl: 'https://www.youtube.com/embed/PEdnH7_7_yc',
+            sampleImageUrl: 'https://3.bp.blogspot.com/-5HXQfWs21w0/U3yKrxjgRDI/AAAAAAAADEY/lNtdm0eXRC0/s1600/right_clutch.jpg',
+            explanation: 'Now back to the initial problem. Since one wheel is on a high traction surface, the torque transmitted to it will be higher. \
+            So the thrust force developed due to the bevel gear separation action also will be high at that side. \
+            Thus clutch pack at high traction wheel side will be pressed firmly and clutch pack will be locked. \
+            So power from the differential casing will flow directly to high traction axle via clutch pack assembly.\
+            On the other hand clutch pack on the low traction wheel side is not engaged yet, so power flow will be limited to that side. \
+            So the vehicle will be able to overcome the traction difference problem.\
+            However while taking a turn the LSD can act like a normal differential. \
+            In this case thrust force developed due to bevel gear separation action won’t be that high. \
+            So the plates in clutch pack will easily overcome frictional resistance and will be able to slip against each other. \
+            Thus the right and left wheel can have different speed just like an open differential.',
+            references: [
+                'http://www.learnengineering.org/2014/05/limited-slip-differential.html',
+				'http://www.drivingfast.net/differentials-explained/'
+            ],
+            arrow_tail_path_d:'M504,229 C490,343 651,265 582,397',
+            arrow_head_path_d:'M555,357 C593,420 532,415 608,380',
+            soundUrl: '../../assets/sounds/differential.mp3'
+        },
+        {
+            elemCode: 'gear',
+            elemName: 'Gear System',
+            parentGrpName: 'FWD',
+            youTubeUrl: 'https://www.youtube.com/embed/wCu9W9xNwtI',
+            sampleImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/a/ac/Gearbox_4gears.gif',
+            explanation: 'A car engine makes power in a fairly violent way by harnessing the energy locked in gasoline. \
+            It works efficiently only when the pistons in the cylinders are pumping up and down at high speeds—about 10-20 times a second. \
+            Even when the car is simply idling by the roadside, the pistons still need to push up and down roughly 1000 times a minute or the engine will cut out. \
+            In other words, the engine has a minimum speed at which it works best of about 1000 rpm. \
+            But that creates an immediate problem because if the engine were connected directly to the wheels, \
+            they\'d have a minimum speed of 1000rpm as well—which corresponds to roughly 120km/h or 75mph. \
+            Put it another way, if you switched on the ignition in a car like this, your wheels would instantly turn at 75mph! \
+            Suppose you put your foot down until the rev counter reached 7000 rpm. Now the wheels should be turning round \
+            about seven times faster and you\'d be going at 840 km/h or about 525 mph\!\
+            It sounds wildly exciting, but there\'s a snag. \
+            It takes a massive amount of force to get a car moving from a standstill and an engine that tries to go at top speed, \
+            right from the word go, won\'t generate enough force to do it. That\'s why cars need gearboxes. \
+            To begin with, a car needs a huge amount of force and very little speed to get it moving, so the driver uses a low gear. \
+            In effect, the gearbox is reducing the speed of the engine greatly but increasing its force in the same proportion to get the car moving. \
+            Once the car\'s going, the driver switches to a higher gear. More of the engine\'s power switches to making speed—and the car goes faster.',
+            references: [
+                'http://www.explainthatstuff.com/gears.html',
+				'https://auto.howstuffworks.com/gears.htm',
+				'http://www.hotrod.com/articles/how-gear-works/'
+            ],
+            arrow_tail_path_d:'M244,339 C163,473 351,475 562,487',
+            arrow_head_path_d:'M531,511 C616,481 568,522 556,460',
+            soundUrl: '../../assets/sounds/gears.mp3'
+        },
+        {
+            elemCode: 'suspensionFWD',
+            elemName: 'Suspension System',
+            parentGrpName: 'FWD',
+            youTubeUrl: 'https://www.youtube.com/embed/DKql4Is8Pas',
+            sampleImageUrl: 'https://i.imgur.com/oqjZTZW.gif',
+            explanation: '<h5>SPRINGS</h5>\
+            There are three types of spring – coil springs, leaf springs and torsion bars.\
+            Most modern cars have coil springs, while older cars and many four-wheel drive vehicles have leaf springs, \
+            which are layers of metal connected to the axle that flex under the weight of the car.\
+            <h5>DAMPERS (SHOCK ABSORBERS)</h5>\
+            Dampers, commonly known as shock absorbers, protect the chassis from the jarring force caused when a wheel hits a bump and prevents the springs from continually bouncing. \
+            They also push the wheel back to the road surface.\
+            A damper is a piston filled with oil that separates the chassis from the wheel. \
+            When the car hits a bump the piston pushes into the casing and is slowed by the oil, which flows into another chamber as it’s compressed.',
+            references: [
+                'http://i.makeagif.com/media/12-30-2015/1CrpBS.gif',
+				'https://www.whichcar.com.au/car-advice/car-suspension-what-it-is-and-how-it-works',
+				'https://www.howacarworks.com/basics/how-car-suspension-works'
+            ],
+            arrow_tail_path_d:'M324,299 C263,513 351,475 482,497',
+            arrow_head_path_d:'M441,511 C526,481 478,522 466,460',
+            soundUrl: '../../assets/sounds/spring.mp3'
+        },
+        {
+            elemCode: 'suspensionRWD',
+            elemName: 'Suspension System',
+            parentGrpName: 'RWD',
+            youTubeUrl: 'https://www.youtube.com/embed/DKql4Is8Pas',
+            sampleImageUrl: 'https://i.imgur.com/oqjZTZW.gif',
+            explanation: '<h5>SPRINGS</h5>\
+            There are three types of spring – coil springs, leaf springs and torsion bars.\
+            Most modern cars have coil springs, while older cars and many four-wheel drive vehicles have leaf springs, \
+            which are layers of metal connected to the axle that flex under the weight of the car.\
+            <h5>DAMPERS (SHOCK ABSORBERS)</h5>\
+            Dampers, commonly known as shock absorbers, protect the chassis from the jarring force caused when a wheel hits a bump and prevents the springs from continually bouncing. \
+            They also push the wheel back to the road surface.\
+            A damper is a piston filled with oil that separates the chassis from the wheel. \
+            When the car hits a bump the piston pushes into the casing and is slowed by the oil, which flows into another chamber as it’s compressed.',
+            references: [
+                'http://i.makeagif.com/media/12-30-2015/1CrpBS.gif',
+				'https://www.whichcar.com.au/car-advice/car-suspension-what-it-is-and-how-it-works',
+				'https://www.howacarworks.com/basics/how-car-suspension-works'
+            ],
+            arrow_tail_path_d:'M324,299 C263,513 351,475 482,497',
+            arrow_head_path_d:'M441,511 C526,481 478,522 466,460',
+            soundUrl: '../../assets/sounds/spring.mp3'
         }
 		
     ];
@@ -199,5 +307,9 @@ export class ContentService{
 
     public getContent(elemCode:string):Content{
         return this._allContent.find(cont => cont.elemCode==elemCode)
+    }
+
+    public getAll():Array<Content>{
+        return this._allContent;
     }
 }

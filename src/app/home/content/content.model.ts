@@ -9,4 +9,6 @@ export class Content{
 
     public arrow_tail_path_d: string;
     public arrow_head_path_d: string;
+
+    public soundUrl:string;
 }

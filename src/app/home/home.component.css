@@ -8,7 +8,7 @@
 #Display-buttons-group{
     /* position:absolute; */
     left:40px;
-    top:100px;
+    top:80px;
     z-index:20;
 }
 
@@ -38,4 +38,15 @@ path.flowing {
 	to {
 		stroke-dashoffset: 0;
 	}
+}
+
+#searchDiv{
+    height: 270px;
+    width: 200px;
+    top: 340px;
+    left: 55px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    position: absolute;
 }
