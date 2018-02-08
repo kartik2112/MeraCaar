@@ -62,13 +62,13 @@
 				</filter>
 			</defs>
 			
-			<path xmlns="http://www.w3.org/2000/svg" id="curve" [attr.d]="_childData.arrow_tail_path_d" style="filter:url(#filter)" [class.flowing]="_startAnim" [attr.visibility]="_startAnim?'visible':'hidden'"/>
-			<path xmlns="http://www.w3.org/2000/svg" id="curve" [attr.d]="_childData.arrow_head_path_d" style="filter:url(#filter)" [class.flowing]="_startAnim" [attr.visibility]="_startAnim?'visible':'hidden'"/>
+			<path *ngIf="_childData" xmlns="http://www.w3.org/2000/svg" id="curve" [attr.d]="_childData.arrow_tail_path_d" style="filter:url(#filter)" [class.flowing]="_startAnim" [attr.visibility]="_startAnim?'visible':'hidden'"/>
+			<path *ngIf="_childData" xmlns="http://www.w3.org/2000/svg" id="curve" [attr.d]="_childData.arrow_head_path_d" style="filter:url(#filter)" [class.flowing]="_startAnim" [attr.visibility]="_startAnim?'visible':'hidden'"/>
             <!-- Reference: http://blogs.sitepointstatic.com/examples/tech/svg-curves/cubic-curve.html -->
             <!-- Reference: https://stackoverflow.com/a/38308005/5370202 -->
         </svg>
         <audio src="../../assets/sounds/blop.mp3" #blop></audio>
-        <audio [src]="_childData.soundUrl" volume="0.2" #audio1 (change)="playAudio1()"></audio>
+        <audio *ngIf="_childData" [src]="_childData.soundUrl" volume="0.2" #audio1 (change)="playAudio1()"></audio>
         <!-- Site for editing audios: http://mp3cutter.toolur.com/ -->
 
     </div>
