@@ -79,7 +79,7 @@ export class ContentService{
             elemCode: 'drumBrake',
             elemName: 'Drum Brakes',
             parentGrpName: 'SuspBreakSys',
-            youTubeUrl: 'https://www.youtube.com/embed/bnc3VnQ8kUY',
+            youTubeUrl: 'https://www.youtube.com/embed/g5n8OqS1Fow',
             // sampleImageUrl: 'https://media.giphy.com/media/MbMhShwKsjJPa/giphy.gif',
             sampleImageUrl: 'http://www.mechanicalbooster.com/wp-content/uploads/2017/11/drum-brake-modal.png',
             explanation: '<ol> <li>As the brake pedal is pressed, it compresses the fluid in the master cylinder and allows the piston of the wheel cylinder to expand outward.</li>\
@@ -89,6 +89,7 @@ export class ContentService{
 			<li>A self adjusting screw is present at the bottom, which is used to maintain a minimum gap between the drum and brake shoe. When the lining of the brake shoe is wear out than the gap between the drum and brake shoe increases, at that time the adjuster is adjusted again to maintain the minimum gap.</li>\
 			</ul>',
             references: [
+                'https://www.youtube.com/watch?v=bnc3VnQ8kUY',
                 'http://www.mechanicalbooster.com/2017/11/how-drum-brakes-work.html'
             ],
             arrow_tail_path_d:'M333,399 C282,459 316,491 382,487',
@@ -156,6 +157,28 @@ export class ContentService{
                 'http://www.animatedengines.com/otto.html',
 				'https://www.linkedin.com/pulse/20140717090644-133229807-principles-and-working-of-four-stroke-gasoline-engine',
 				'https://www.briggsandstratton.com/na/en_us/support/videos/browse/4-cycle-theory.html'
+            ],
+            arrow_tail_path_d:'M244,339 C163,473 351,475 582,487',
+            arrow_head_path_d:'M551,511 C636,481 588,522 576,460',
+            soundUrl: '../../assets/sounds/engine-rev.mp3'
+        },
+        {
+            elemCode: 'carburetor',
+            elemName: 'Carburetor',
+            parentGrpName: 'FWD',
+            youTubeUrl: 'https://www.youtube.com/embed/oIU-lGc3DL4',
+            sampleImageUrl: 'https://cdn4.explainthatstuff.com/how-carburetor-works.png',
+            explanation: '<ol><li>Air flows into the top of the carburetor from the car\'s air intake, passing through a filter that cleans it of debris.</li>\
+            <li>When the engine is first started, the choke (blue) can be set so it almost blocks the top of the pipe to reduce the amount of air coming in (increasing the fuel content of the mixture entering the cylinders).</li>\
+            <li>In the center of the tube, the air is forced through a narrow kink called a venturi. This makes it speed up and causes its pressure to drop.</li>\
+            <li>The drop in air pressure creates suction on the fuel pipe (right), drawing in fuel (orange).</li>\
+            <li>The throttle (green) is a valve that swivels to open or close the pipe. When the throttle is open, more air and fuel flows to the cylinders so the engine produces more power and the car goes faster.</li>\
+            <li>The mixture of air and fuel flows down into the cylinders.</li>\
+            <li>Fuel (orange) is supplied from a mini-fuel tank called the float-feed chamber.</li>\
+            <li>As the fuel level falls, a float in the chamber falls and opens a valve at the top.</li>\
+            <li>When the valve opens, more fuel flows in to replenish the chamber from the main gas tank. This makes the float rise and close the valve again.</li></ol>',
+            references: [
+                'http://www.explainthatstuff.com/how-carburetors-work.html'
             ],
             arrow_tail_path_d:'M244,339 C163,473 351,475 582,487',
             arrow_head_path_d:'M551,511 C636,481 588,522 576,460',

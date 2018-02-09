@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-md-1">
+    <div class="col-lg-1 col-sm-12 col-12">
         <div id="Display-buttons-group" class="btn-group-vertical btn-group-sm col-centered" style="margin:auto;">            
             <button type="button" class="btn btn-primary" [disabled]="dispMode=='Sys'" (click)="modifyDisplayContents('Sys')">Dive Out</button>
             <button type="button" class="btn btn-primary" [disabled]="dispMode=='CoolSys'" (click)="modifyDisplayContents('CoolSys')">Cooling System</button>
@@ -22,8 +22,8 @@
             </div> -->
         </div>
     </div>
-    <div id="mainSVG-BG" class="col-md-7">
-        <svg width="800" height="550">
+    <div id="mainSVG-BG" class="col-lg-7 col-sm-12 col-12">
+        <svg width="800" height="550" class="float-right">
             <image id="base-car" [attr.visibility]="dispMode=='Sys'?'visible':'hidden'" [ngClass]="{beingDisplayed: dispMode=='Sys', notbeingDisplayed: dispMode!='Sys', otherCSSClass:otherProperty}" class="base-car sys" x="5%" y="5%" width="90%" xlink:href="../assets/images/base-car.png" />
 
             <image id="cooling-sys" [attr.visibility]="dispMode=='CoolSys'?'visible':'hidden'" [ngClass]="{beingDisplayed: dispMode=='CoolSys', notbeingDisplayed: dispMode!='CoolSys', otherCSSClass:otherProperty}" class="cooling-sys sys" x="5%" y="5%" width="90%" xlink:href="../assets/images/Cooling-System.png" />
@@ -43,6 +43,12 @@
             <image id="FWD-radiator" [attr.visibility]="dispMode=='FWD'?'visible':'hidden'" (mouseenter)="playAudio('blop')" (click)="openComponent('radiator')" [ngClass]="{beingDisplayed: dispMode=='FWD', notbeingDisplayed: dispMode!='FWD', otherCSSClass:otherProperty}" class="FWD sys" x="5%" y="5%" width="90%" xlink:href="../assets/images/FWD-radiator.png" />
             <image id="FWD-suspension_active" [attr.visibility]="dispMode=='FWD'?'visible':'hidden'" [ngClass]="{beingDisplayed: dispMode=='FWD', notbeingDisplayed: dispMode!='FWD', otherCSSClass:otherProperty}" class="FWD sys" x="5%" y="5%" width="90%" xlink:href="../assets/images/FWD-suspension_active.png" />
             <image id="FWD-suspension" [attr.visibility]="dispMode=='FWD'?'visible':'hidden'" (mouseenter)="playAudio('blop')" (click)="openComponent('suspensionFWD')" [ngClass]="{beingDisplayed: dispMode=='FWD', notbeingDisplayed: dispMode!='FWD', otherCSSClass:otherProperty}" class="FWD sys" x="5%" y="5%" width="90%" xlink:href="../assets/images/FWD-suspension.png" />
+
+            <!-- <g>
+                <clipPath id="RWD-engine-mask">
+                    <polygon points="319,178 315,187 292,180 260,151 243,164 228,158 212,175 195,175 182,186 170,201 177,211 173,220 180,228 178,262 196,279 202,277 233,268 256,261 278,267 294,263 310,214 328,201 322,186" />
+                </clipPath>
+            </g>  -->
 
             <image id="RWD" [attr.visibility]="dispMode=='RWD'?'visible':'hidden'" [ngClass]="{beingDisplayed: dispMode=='RWD', notbeingDisplayed: dispMode!='RWD', otherCSSClass:otherProperty}" class="RWD sys" x="5%" y="5%" width="90%" xlink:href="../assets/images/RWD.png" />
             <image id="RWD-engine_active" [attr.visibility]="dispMode=='RWD'?'visible':'hidden'" [ngClass]="{beingDisplayed: dispMode=='RWD', notbeingDisplayed: dispMode!='RWD', otherCSSClass:otherProperty}" class="RWD sys" x="5%" y="5%" width="90%" xlink:href="../assets/images/RWD-engine_active.png" />
@@ -72,11 +78,12 @@
         <!-- Site for editing audios: http://mp3cutter.toolur.com/ -->
 
     </div>
-    <!-- <content-comp class="col-md-3"></content-comp> -->
-    <div class="col-md-4" style="z-index:10">
+    <!-- <content-comp class="col-lg-3"></content-comp> -->
+    <div class="col-lg-4 col-sm-12 col-12" style="z-index:10">
         <router-outlet></router-outlet>
 
     </div>
+    <br/><br/><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kartik Shenoy&copy;<br/>
     
     
 </div>

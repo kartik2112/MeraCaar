@@ -1,7 +1,7 @@
-<div class="card" style="width:450px;margin-left:-30px;margin-top:80px;">
+<div id="mainCard" class="card" style="">
     <div class="card-img-top">
         <div class="vid-container">
-            <iframe style="width:70%;margin-left:15%;margin-top:10px;height:180px;" 
+            <iframe id="youtubeIFrame" style="" 
                 [src]="_videoSafeUrl" 
                 frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
             </iframe>
@@ -17,7 +17,7 @@
     </div>
     <div class="card-body" style="padding-top: 0px;">
         <h4 class="card-title">{{ _data.elemName }}</h4>
-        <div id="custom-scrollbar" style="height:270px; overflow-y: scroll;font-size: x-small">
+        <div id="custom-scrollbar" style="">
             <p class="card-text" style="" [innerHTML]="_data.explanation"></p>
             <!-- Reference: https://stackoverflow.com/a/38279651-->
             <h5>References:</h5>
@@ -31,8 +31,8 @@
         </div>        
     </div>
 </div>
-<div class="card" style="position:absolute;bottom:0px;right:490px;width:fit-content;margin-left:-30px;margin-top:150px;">
+<div id="extraImgCard" class="card" style="">
     <div class="card-img-top">
-        <img style="height:200px" [src]="_data.sampleImageUrl"/>
+        <img id="extraImg" style="height:200px" [src]="_data.sampleImageUrl"/>
     </div>
 </div>

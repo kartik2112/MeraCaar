@@ -5,12 +5,31 @@
     z-index:10!important;
     /* background-color: rgba(255, 255, 255, 0.27); */
 }
+
+/* @media (min-width: 992px ){
+    #mainSVG-BG{
+        zoom: 70%;
+    }
+
+    .sys{
+        zoom: 70%;
+    }
+}
+
+@media (min-width: 1200px ){
+    #mainSVG-BG{
+        zoom: 100%;
+    }
+} */
+
 #Display-buttons-group{
     /* position:absolute; */
     left:40px;
     top:80px;
     z-index:20;
 }
+
+
 
 .beingDisplayed{
     /* display:block; */
@@ -50,3 +69,73 @@ path.flowing {
     border-radius: 5px;
     position: absolute;
 }
+
+
+
+@media (min-width: 576px) and (max-width: 992px){
+    #Display-buttons-group{
+        width: 90%;
+        margin: auto;
+        display: block;
+        top:0px;
+        left: 0px;
+        margin-top: 20px!important;
+    }
+
+    #searchDiv{
+        position: relative;
+        width: 90%;
+        margin: auto;
+        height: 170px;
+        top:0px;
+        left: 0px;
+        margin-top: 20px;
+    }
+    
+    #custom-scrollbar{
+        height: 120px;
+        height: 120px!important;
+    }
+
+    #mainSVG-BG{
+        zoom: 70%;
+        margin: auto!important;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 575px){
+    #Display-buttons-group{
+        width: 95%;
+        margin: auto;
+        display: block;
+        top:0px;
+        left: 0px;
+        margin-top: 20px!important;
+    }
+
+    #searchDiv{
+        position: relative;
+        width: 95%;
+        margin: auto;
+        height: 170px;
+        top:0px;
+        left: 0px;
+        margin-top: 20px;
+    }
+
+    #custom-scrollbar{
+        height: 120px!important;
+    }
+
+    #mainSVG-BG{
+        zoom: 50%;
+        margin: auto!important;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px){    
+    #mainSVG-BG{
+        zoom: 80%;
+    }
+}
+
