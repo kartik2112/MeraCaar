@@ -21,6 +21,7 @@ export class ContentService{
             elemCode: 'discBrake',
             elemName: 'Disc Brakes',
             parentGrpName: 'SuspBreakSys',
+            anchorDisplay: true,
             youTubeUrl: 'https://www.youtube.com/embed/MAuVDB-G-HQ',
             sampleImageUrl: 'http://www.acuravigorclub.com/Timely-Topics/TTGraphics/1204/CaliperAnimation.gif',
             // sampleImageUrl: 'https://r.hswstatic.com/w_285/gif/disc-brake3.jpg',
@@ -37,6 +38,7 @@ export class ContentService{
             elemCode: 'tyres',
             elemName: 'Tyre Components & Dimensions',
             parentGrpName: 'SuspBreakSys',
+            anchorDisplay: true,
             youTubeUrl: 'https://www.youtube.com/embed/K3qkkp4aPJk',
             sampleImageUrl: 'http://www.imagequiz.co.uk/img?img_id=ag5zfmltYWdlbGVhcm5lcnIOCxIHUXVpenplcxjGPgw',
             // sampleImageUrl: 'https://r.hswstatic.com/w_285/gif/disc-brake3.jpg',
@@ -79,6 +81,7 @@ export class ContentService{
             elemCode: 'drumBrake',
             elemName: 'Drum Brakes',
             parentGrpName: 'SuspBreakSys',
+            anchorDisplay: true,
             youTubeUrl: 'https://www.youtube.com/embed/g5n8OqS1Fow',
             // sampleImageUrl: 'https://media.giphy.com/media/MbMhShwKsjJPa/giphy.gif',
             sampleImageUrl: 'http://www.mechanicalbooster.com/wp-content/uploads/2017/11/drum-brake-modal.png',
@@ -100,6 +103,7 @@ export class ContentService{
             elemCode: 'radiator',
             elemName: 'Radiator',
             parentGrpName: 'CoolSys',
+            anchorDisplay: true,
             youTubeUrl: 'https://www.youtube.com/embed/V7inC4lOpGs',
             sampleImageUrl: 'https://image.cpsimg.com/sites/carparts-mc/assets/classroom/images/cooling-system.gif',
             explanation: 'A thermostat at the front of the engine detects when the engine reaches an unacceptable temperature. This triggers the release of water and coolant—both of which are held in the radiator.<br/>\
@@ -118,6 +122,7 @@ export class ContentService{
             elemCode: 'engineRWD',
             elemName: '4 Stroke Engine',
             parentGrpName: 'RWD',
+            anchorDisplay: false,
             youTubeUrl: 'https://www.youtube.com/embed/OGj8OneMjek',
             sampleImageUrl: 'https://i2.wp.com/mechstuff.com/wp-content/uploads/2015/10/4StrokeEngine_Ortho_3D_Small.gif?resize=225%2C300',
             explanation: '<h5>Step 1: Intake Stroke</h5>\
@@ -142,6 +147,7 @@ export class ContentService{
             elemCode: 'engineFWD',
             elemName: '4 Stroke Engine',
             parentGrpName: 'FWD',
+            anchorDisplay: true,
             youTubeUrl: 'https://www.youtube.com/embed/OGj8OneMjek',
             sampleImageUrl: 'https://i2.wp.com/mechstuff.com/wp-content/uploads/2015/10/4StrokeEngine_Ortho_3D_Small.gif?resize=225%2C300',
             explanation: '<h5>Step 1: Intake Stroke</h5>\
@@ -166,6 +172,7 @@ export class ContentService{
             elemCode: 'carburetor',
             elemName: 'Carburetor',
             parentGrpName: 'FWD',
+            anchorDisplay: true,
             youTubeUrl: 'https://www.youtube.com/embed/oIU-lGc3DL4',
             sampleImageUrl: 'https://cdn4.explainthatstuff.com/how-carburetor-works.png',
             explanation: '<ol><li>Air flows into the top of the carburetor from the car\'s air intake, passing through a filter that cleans it of debris.</li>\
@@ -188,6 +195,7 @@ export class ContentService{
             elemCode: 'differential',
             elemName: 'Differential System',
             parentGrpName: 'RWD',
+            anchorDisplay: true,
             youTubeUrl: 'https://www.youtube.com/embed/SOgoejxzF8c',
             sampleImageUrl: 'https://thumbs.gfycat.com/KaleidoscopicObedientDipper-max-1mb.gif',
             explanation: 'For the non-driven wheels on your car -- the front wheels on a rear-wheel drive car, \
@@ -218,6 +226,7 @@ export class ContentService{
             elemCode: 'limitedSlipDifferential',
             elemName: 'Limited Slip Diff. System',
             parentGrpName: 'RWD',
+            anchorDisplay: true,
             youTubeUrl: 'https://www.youtube.com/embed/PEdnH7_7_yc',
             sampleImageUrl: 'https://3.bp.blogspot.com/-5HXQfWs21w0/U3yKrxjgRDI/AAAAAAAADEY/lNtdm0eXRC0/s1600/right_clutch.jpg',
             explanation: 'Now back to the initial problem. Since one wheel is on a high traction surface, the torque transmitted to it will be higher. \
@@ -242,6 +251,7 @@ export class ContentService{
             elemCode: 'gear',
             elemName: 'Gear System',
             parentGrpName: 'FWD',
+            anchorDisplay: true,
             youTubeUrl: 'https://www.youtube.com/embed/wCu9W9xNwtI',
             sampleImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/a/ac/Gearbox_4gears.gif',
             explanation: 'A car engine makes power in a fairly violent way by harnessing the energy locked in gasoline. \
@@ -270,11 +280,13 @@ export class ContentService{
         },
         {
             elemCode: 'suspensionFWD',
-            elemName: 'Suspension System',
+            elemName: 'Front Suspension System',
             parentGrpName: 'FWD',
+            anchorDisplay: true,
             youTubeUrl: 'https://www.youtube.com/embed/DKql4Is8Pas',
             sampleImageUrl: 'https://i.imgur.com/oqjZTZW.gif',
-            explanation: '<h5>SPRINGS</h5>\
+            explanation: '<h4>MacPherson Strut Suspension w/ Anti Roll Bar Front Suspension System</h4>\
+            <h5>SPRINGS</h5>\
             There are three types of spring – coil springs, leaf springs and torsion bars.\
             Most modern cars have coil springs, while older cars and many four-wheel drive vehicles have leaf springs, \
             which are layers of metal connected to the axle that flex under the weight of the car.\
@@ -294,11 +306,13 @@ export class ContentService{
         },
         {
             elemCode: 'suspensionRWD',
-            elemName: 'Suspension System',
+            elemName: 'Front Suspension System',
             parentGrpName: 'RWD',
+            anchorDisplay: false,
             youTubeUrl: 'https://www.youtube.com/embed/DKql4Is8Pas',
-            sampleImageUrl: 'https://i.imgur.com/oqjZTZW.gif',
-            explanation: '<h5>SPRINGS</h5>\
+            sampleImageUrl: 'https://i.imgur.com/oqjZTZW.gif',            
+            explanation: '<h4>MacPherson Strut Suspension w/ Anti Roll Bar Front Suspension System</h4>\
+            <h5>SPRINGS</h5>\
             There are three types of spring – coil springs, leaf springs and torsion bars.\
             Most modern cars have coil springs, while older cars and many four-wheel drive vehicles have leaf springs, \
             which are layers of metal connected to the axle that flex under the weight of the car.\
@@ -314,6 +328,101 @@ export class ContentService{
             ],
             arrow_tail_path_d:'M324,299 C263,513 351,475 482,497',
             arrow_head_path_d:'M441,511 C526,481 478,522 466,460',
+            soundUrl: '../../assets/sounds/spring.mp3'
+        },
+        {
+            elemCode: 'suspension_only_FW',
+            elemName: 'Front Suspension System',
+            parentGrpName: 'SuspBreakSys',
+            anchorDisplay: false,
+            youTubeUrl: 'https://www.youtube.com/embed/DKql4Is8Pas',
+            sampleImageUrl: 'https://i.imgur.com/oqjZTZW.gif',
+            explanation: '<h4>MacPherson Strut Suspension w/ Anti Roll Bar Front Suspension System</h4>\
+            <h5>SPRINGS</h5>\
+            There are three types of spring – coil springs, leaf springs and torsion bars.\
+            Most modern cars have coil springs, while older cars and many four-wheel drive vehicles have leaf springs, \
+            which are layers of metal connected to the axle that flex under the weight of the car.\
+            <h5>DAMPERS (SHOCK ABSORBERS)</h5>\
+            Dampers, commonly known as shock absorbers, protect the chassis from the jarring force caused when a wheel hits a bump and prevents the springs from continually bouncing. \
+            They also push the wheel back to the road surface.\
+            A damper is a piston filled with oil that separates the chassis from the wheel. \
+            When the car hits a bump the piston pushes into the casing and is slowed by the oil, which flows into another chamber as it’s compressed.',
+            references: [
+                'http://i.makeagif.com/media/12-30-2015/1CrpBS.gif',
+				'https://www.whichcar.com.au/car-advice/car-suspension-what-it-is-and-how-it-works',
+				'https://www.howacarworks.com/basics/how-car-suspension-works'
+            ],
+            arrow_tail_path_d:'M324,299 C263,513 351,475 482,497',
+            arrow_head_path_d:'M441,511 C526,481 478,522 466,460',
+            soundUrl: '../../assets/sounds/spring.mp3'
+        },
+        {
+            elemCode: 'suspensionFWD_RW',
+            elemName: 'Rear Suspension System',
+            parentGrpName: 'FWD',
+            anchorDisplay: true,
+            youTubeUrl: 'https://www.youtube.com/embed/_liGnV3PTiQ',
+            sampleImageUrl: 'https://qph.ec.quoracdn.net/main-qimg-6a9834c61121793a57af1d17821a8d32-c',
+            explanation: '<h4>Torsion Beam with Coil Spring Rear Suspension </h4>\
+            It is a bar connecting both wheels that twists ever so slightly under duress, in order to give a degree of independence to each wheel\'s movements.\
+            Under lateral (side-to-side) force, however, the torsion beam remains rigid to resist body roll, which lets you corner with confidence. Simple, solid, sorted.\
+            Torsion bars take up less vertical space than MacPherson strut setups and less horizontal space than double wishbone and multi-link systems, netting more room for humans in the cabin and their stuff in the boot.\
+            Torsion beam setups are relatively cheap and easy to manufacture, install and maintain, but they don\'t offer the engineer anywhere near the same amount of freedom to balance comfort, agility and stability as independent systems do.\
+            Because torsion bars offer less isolation than independent systems, they can also allow more noise, vibration and harshness to filter into the cabin.\
+            Now, in a well-soundproofed car that isn\'t driven in anger, these issues might never become apparent, let alone cause any grief.\
+            So, while independent suspension can be the best way to look after what\'s going on under your car, \
+            it\'s not always necessary, and you should seriously consider whether it\'s worth spending the extra money for a vehicle that\'s fitted with it.',
+            references: [
+                'https://www.carsguide.com.au/car-advice/what-are-the-different-types-of-rear-suspension-37837'
+            ],
+            arrow_tail_path_d:'M574,249 C313,483 401,475 532,497',
+            arrow_head_path_d:'M491,511 C576,481 528,522 516,460',
+            soundUrl: '../../assets/sounds/spring.mp3'
+        },
+        {
+            elemCode: 'suspensionRWD_RW',
+            elemName: 'Rear Suspension System',
+            parentGrpName: 'RWD',
+            anchorDisplay: false,
+            youTubeUrl: 'https://www.youtube.com/embed/_liGnV3PTiQ',
+            sampleImageUrl: 'https://qph.ec.quoracdn.net/main-qimg-6a9834c61121793a57af1d17821a8d32-c',
+            explanation: '<h4>Torsion Beam with Coil Spring Rear Suspension </h4>\
+            It is a bar connecting both wheels that twists ever so slightly under duress, in order to give a degree of independence to each wheel\'s movements.\
+            Under lateral (side-to-side) force, however, the torsion beam remains rigid to resist body roll, which lets you corner with confidence. Simple, solid, sorted.\
+            Torsion bars take up less vertical space than MacPherson strut setups and less horizontal space than double wishbone and multi-link systems, netting more room for humans in the cabin and their stuff in the boot.\
+            Torsion beam setups are relatively cheap and easy to manufacture, install and maintain, but they don\'t offer the engineer anywhere near the same amount of freedom to balance comfort, agility and stability as independent systems do.\
+            Because torsion bars offer less isolation than independent systems, they can also allow more noise, vibration and harshness to filter into the cabin.\
+            Now, in a well-soundproofed car that isn\'t driven in anger, these issues might never become apparent, let alone cause any grief.\
+            So, while independent suspension can be the best way to look after what\'s going on under your car, \
+            it\'s not always necessary, and you should seriously consider whether it\'s worth spending the extra money for a vehicle that\'s fitted with it.',
+            references: [
+                'https://www.carsguide.com.au/car-advice/what-are-the-different-types-of-rear-suspension-37837'
+            ],
+            arrow_tail_path_d:'M574,249 C313,483 401,475 532,497',
+            arrow_head_path_d:'M491,511 C576,481 528,522 516,460',
+            soundUrl: '../../assets/sounds/spring.mp3'
+        },
+        {
+            elemCode: 'suspension_only_RW',
+            elemName: 'Rear Suspension System',
+            parentGrpName: 'SuspBreakSys',
+            anchorDisplay: false,
+            youTubeUrl: 'https://www.youtube.com/embed/_liGnV3PTiQ',
+            sampleImageUrl: 'https://qph.ec.quoracdn.net/main-qimg-6a9834c61121793a57af1d17821a8d32-c',
+            explanation: '<h4>Torsion Beam with Coil Spring Rear Suspension </h4>\
+            It is a bar connecting both wheels that twists ever so slightly under duress, in order to give a degree of independence to each wheel\'s movements.\
+            Under lateral (side-to-side) force, however, the torsion beam remains rigid to resist body roll, which lets you corner with confidence. Simple, solid, sorted.\
+            Torsion bars take up less vertical space than MacPherson strut setups and less horizontal space than double wishbone and multi-link systems, netting more room for humans in the cabin and their stuff in the boot.\
+            Torsion beam setups are relatively cheap and easy to manufacture, install and maintain, but they don\'t offer the engineer anywhere near the same amount of freedom to balance comfort, agility and stability as independent systems do.\
+            Because torsion bars offer less isolation than independent systems, they can also allow more noise, vibration and harshness to filter into the cabin.\
+            Now, in a well-soundproofed car that isn\'t driven in anger, these issues might never become apparent, let alone cause any grief.\
+            So, while independent suspension can be the best way to look after what\'s going on under your car, \
+            it\'s not always necessary, and you should seriously consider whether it\'s worth spending the extra money for a vehicle that\'s fitted with it.',
+            references: [
+                'https://www.carsguide.com.au/car-advice/what-are-the-different-types-of-rear-suspension-37837'
+            ],
+            arrow_tail_path_d:'M574,249 C313,483 401,475 532,497',
+            arrow_head_path_d:'M491,511 C576,481 528,522 516,460',
             soundUrl: '../../assets/sounds/spring.mp3'
         }
 		
@@ -333,6 +442,6 @@ export class ContentService{
     }
 
     public getAll():Array<Content>{
-        return this._allContent;
+        return this._allContent.filter( cont => cont.anchorDisplay );
     }
 }

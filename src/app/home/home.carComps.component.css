@@ -121,6 +121,7 @@ So, I replaced the image in that site using inspect and set the image size to th
 
 
 
+
 #FWD-engine{
     -webkit-clip-path: polygon(198px 320px,185px 321px,180px 308px,184px 295px,177px 272px,179px 253px,159px 234px,166px 226px,161px 214px,174px 192px,178px 173px,199px 174px,214px 169px,222px 182px,229px 183px,235px 182px,265px 196px,276px 201px,279px 217px,274px 226px,280px 230px,279px 238px,274px 242px,266px 251px,270px 260px,269px 273px,266px 295px,268px 306px,263px 308px,229px 324px,207px 326px);
     clip-path: polygon(198px 320px,185px 321px,180px 308px,184px 295px,177px 272px,179px 253px,159px 234px,166px 226px,161px 214px,174px 192px,178px 173px,199px 174px,214px 169px,222px 182px,229px 183px,235px 182px,265px 196px,276px 201px,279px 217px,274px 226px,280px 230px,279px 238px,274px 242px,266px 251px,270px 260px,269px 273px,266px 295px,268px 306px,263px 308px,229px 324px,207px 326px);
@@ -217,6 +218,86 @@ So, I replaced the image in that site using inspect and set the image size to th
 }
 
 #RWD-suspension:hover{
+    opacity: 0.0;
+    transition: all 0.1s
+}
+
+
+
+
+
+#suspension-only_front-suspension{
+    -webkit-clip-path: polygon(154px 244px,137px 247px,140px 238px,159px 229px,167px 214px,172px 215px,178px 182px,186px 171px,194px 171px,203px 183px,192px 217px,183px 227px,180px 239px,187px 250px,202px 242px,214px 247px,240px 235px,257px 258px,271px 263px,264px 272px,253px 270px,253px 264px,250px 260px,226px 264px,225px 271px,238px 282px,250px 285px,260px 288px,271px 262px,274px 256px,275px 243px,273px 233px,267px 220px,278px 212px,291px 205px,301px 209px,302px 257px,298px 267px,316px 273px,311px 277px,296px 277px,301px 293px,296px 304px,296px 320px,291px 325px,274px 312px,260px 310px,158px 260px);
+    clip-path: polygon(154px 244px,137px 247px,140px 238px,159px 229px,167px 214px,172px 215px,178px 182px,186px 171px,194px 171px,203px 183px,192px 217px,183px 227px,180px 239px,187px 250px,202px 242px,214px 247px,240px 235px,257px 258px,271px 263px,264px 272px,253px 270px,253px 264px,250px 260px,226px 264px,225px 271px,238px 282px,250px 285px,260px 288px,271px 262px,274px 256px,275px 243px,273px 233px,267px 220px,278px 212px,291px 205px,301px 209px,302px 257px,298px 267px,316px 273px,311px 277px,296px 277px,301px 293px,296px 304px,296px 320px,291px 325px,274px 312px,260px 310px,158px 260px);    
+    cursor: pointer;
+}
+
+#suspension-only_front-suspension_active{
+    -webkit-clip-path: polygon(154px 244px,137px 247px,140px 238px,159px 229px,167px 214px,172px 215px,178px 182px,186px 171px,194px 171px,203px 183px,192px 217px,183px 227px,180px 239px,187px 250px,202px 242px,214px 247px,240px 235px,257px 258px,271px 263px,264px 272px,253px 270px,253px 264px,250px 260px,226px 264px,225px 271px,238px 282px,250px 285px,260px 288px,271px 262px,274px 256px,275px 243px,273px 233px,267px 220px,278px 212px,291px 205px,301px 209px,302px 257px,298px 267px,316px 273px,311px 277px,296px 277px,301px 293px,296px 304px,296px 320px,291px 325px,274px 312px,260px 310px,158px 260px);
+    clip-path: polygon(154px 244px,137px 247px,140px 238px,159px 229px,167px 214px,172px 215px,178px 182px,186px 171px,194px 171px,203px 183px,192px 217px,183px 227px,180px 239px,187px 250px,202px 242px,214px 247px,240px 235px,257px 258px,271px 263px,264px 272px,253px 270px,253px 264px,250px 260px,226px 264px,225px 271px,238px 282px,250px 285px,260px 288px,271px 262px,274px 256px,275px 243px,273px 233px,267px 220px,278px 212px,291px 205px,301px 209px,302px 257px,298px 267px,316px 273px,311px 277px,296px 277px,301px 293px,296px 304px,296px 320px,291px 325px,274px 312px,260px 310px,158px 260px);    
+    cursor: pointer;
+}
+
+#suspension-only_front-suspension:hover{
+    opacity: 0.0;
+    transition: all 0.1s
+}
+
+
+
+
+#suspension-only_rear-suspension{
+    -webkit-clip-path: polygon(374px 185px,381px 181px,399px 186px,415px 188px,429px 181px,434px 178px,419px 176px,414px 164px,418px 148px,428px 134px,448px 134px,454px 148px,459px 145px,463px 123px,479px 112px,489px 123px,479px 145px,501px 139px,505px 149px,562px 171px,543px 179px,544px 174px,537px 173px,533px 179px,520px 176px,512px 169px,505px 162px,500px 171px,495px 156px,492px 159px,494px 167px,483px 165px,482px 159px,475px 159px,475px 165px,484px 165px,493px 167px,494px 170px,499px 175px,503px 176px,487px 177px,482px 170px,475px 170px,469px 172px,472px 175px,485px 177px,499px 177px,496px 182px,496px 186px,485px 188px,476px 184px,459px 186px,464px 190px,490px 195px,494px 186px,512px 186px,512px 193px,500px 192px,496px 197px,508px 202px,512px 198px,512px 186px,516px 183px,527px 186px,565px 171px,557px 159px,564px 147px,574px 148px,590px 195px,565px 214px,537px 219px,537px 206px,540px 196px,530px 194px,525px 197px,527px 204px,536px 208px,537px 220px,499px 235px,492px 231px,493px 222px,506px 217px,486px 203px,477px 205px,466px 199px,453px 197px,440px 203px,425px 200px,418px 204px,411px 203px,402px 214px,394px 210px,394px 192px,380px 190px);    
+    clip-path: polygon(374px 185px,381px 181px,399px 186px,415px 188px,429px 181px,434px 178px,419px 176px,414px 164px,418px 148px,428px 134px,448px 134px,454px 148px,459px 145px,463px 123px,479px 112px,489px 123px,479px 145px,501px 139px,505px 149px,562px 171px,543px 179px,544px 174px,537px 173px,533px 179px,520px 176px,512px 169px,505px 162px,500px 171px,495px 156px,492px 159px,494px 167px,483px 165px,482px 159px,475px 159px,475px 165px,484px 165px,493px 167px,494px 170px,499px 175px,503px 176px,487px 177px,482px 170px,475px 170px,469px 172px,472px 175px,485px 177px,499px 177px,496px 182px,496px 186px,485px 188px,476px 184px,459px 186px,464px 190px,490px 195px,494px 186px,512px 186px,512px 193px,500px 192px,496px 197px,508px 202px,512px 198px,512px 186px,516px 183px,527px 186px,565px 171px,557px 159px,564px 147px,574px 148px,590px 195px,565px 214px,537px 219px,537px 206px,540px 196px,530px 194px,525px 197px,527px 204px,536px 208px,537px 220px,499px 235px,492px 231px,493px 222px,506px 217px,486px 203px,477px 205px,466px 199px,453px 197px,440px 203px,425px 200px,418px 204px,411px 203px,402px 214px,394px 210px,394px 192px,380px 190px);    
+    cursor: pointer;
+}
+
+#suspension-only_rear-suspension_active{
+    -webkit-clip-path: polygon(374px 185px,381px 181px,399px 186px,415px 188px,429px 181px,434px 178px,419px 176px,414px 164px,418px 148px,428px 134px,448px 134px,454px 148px,459px 145px,463px 123px,479px 112px,489px 123px,479px 145px,501px 139px,505px 149px,562px 171px,543px 179px,544px 174px,537px 173px,533px 179px,520px 176px,512px 169px,505px 162px,500px 171px,495px 156px,492px 159px,494px 167px,483px 165px,482px 159px,475px 159px,475px 165px,484px 165px,493px 167px,494px 170px,499px 175px,503px 176px,487px 177px,482px 170px,475px 170px,469px 172px,472px 175px,485px 177px,499px 177px,496px 182px,496px 186px,485px 188px,476px 184px,459px 186px,464px 190px,490px 195px,494px 186px,512px 186px,512px 193px,500px 192px,496px 197px,508px 202px,512px 198px,512px 186px,516px 183px,527px 186px,565px 171px,557px 159px,564px 147px,574px 148px,590px 195px,565px 214px,537px 219px,537px 206px,540px 196px,530px 194px,525px 197px,527px 204px,536px 208px,537px 220px,499px 235px,492px 231px,493px 222px,506px 217px,486px 203px,477px 205px,466px 199px,453px 197px,440px 203px,425px 200px,418px 204px,411px 203px,402px 214px,394px 210px,394px 192px,380px 190px);    
+    clip-path: polygon(374px 185px,381px 181px,399px 186px,415px 188px,429px 181px,434px 178px,419px 176px,414px 164px,418px 148px,428px 134px,448px 134px,454px 148px,459px 145px,463px 123px,479px 112px,489px 123px,479px 145px,501px 139px,505px 149px,562px 171px,543px 179px,544px 174px,537px 173px,533px 179px,520px 176px,512px 169px,505px 162px,500px 171px,495px 156px,492px 159px,494px 167px,483px 165px,482px 159px,475px 159px,475px 165px,484px 165px,493px 167px,494px 170px,499px 175px,503px 176px,487px 177px,482px 170px,475px 170px,469px 172px,472px 175px,485px 177px,499px 177px,496px 182px,496px 186px,485px 188px,476px 184px,459px 186px,464px 190px,490px 195px,494px 186px,512px 186px,512px 193px,500px 192px,496px 197px,508px 202px,512px 198px,512px 186px,516px 183px,527px 186px,565px 171px,557px 159px,564px 147px,574px 148px,590px 195px,565px 214px,537px 219px,537px 206px,540px 196px,530px 194px,525px 197px,527px 204px,536px 208px,537px 220px,499px 235px,492px 231px,493px 222px,506px 217px,486px 203px,477px 205px,466px 199px,453px 197px,440px 203px,425px 200px,418px 204px,411px 203px,402px 214px,394px 210px,394px 192px,380px 190px);    
+    cursor: pointer;
+}
+
+
+#suspension-only_rear-suspension:hover{
+    opacity: 0.0;
+    transition: all 0.1s
+}
+
+
+
+#FWD-rear-suspension{
+    -webkit-clip-path: polygon(414px 186px,425px 183px,429px 176px,418px 169px,453px 176px,459px 188px,502px 205px,505px 201px,507px 192px,452px 175px,416px 167px,417px 150px,428px 131px,456px 139px,457px 129px,465px 112px,482px 118px,476px 145px,493px 137px,498px 146px,555px 168px,538px 195px,531px 190px,523px 192px,524px 201px,532px 202px,555px 169px,554px 159px,552px 145px,567px 143px,574px 167px,587px 182px,587px 196px,567px 206px,562px 199px,539px 204px,564px 207px,586px 197px,597px 201px,586px 222px,572px 229px,537px 214px,510px 223px,488px 228px,489px 221px,503px 214px,445px 190px,411px 196px,415px 189px);
+    clip-path: polygon(414px 186px,425px 183px,429px 176px,418px 169px,453px 176px,459px 188px,502px 205px,505px 201px,507px 192px,452px 175px,416px 167px,417px 150px,428px 131px,456px 139px,457px 129px,465px 112px,482px 118px,476px 145px,493px 137px,498px 146px,555px 168px,538px 195px,531px 190px,523px 192px,524px 201px,532px 202px,555px 169px,554px 159px,552px 145px,567px 143px,574px 167px,587px 182px,587px 196px,567px 206px,562px 199px,539px 204px,564px 207px,586px 197px,597px 201px,586px 222px,572px 229px,537px 214px,510px 223px,488px 228px,489px 221px,503px 214px,445px 190px,411px 196px,415px 189px);
+    cursor: pointer;
+}
+
+#FWD-rear-suspension_active{
+    -webkit-clip-path: polygon(414px 186px,425px 183px,429px 176px,418px 169px,453px 176px,459px 188px,502px 205px,505px 201px,507px 192px,452px 175px,416px 167px,417px 150px,428px 131px,456px 139px,457px 129px,465px 112px,482px 118px,476px 145px,493px 137px,498px 146px,555px 168px,538px 195px,531px 190px,523px 192px,524px 201px,532px 202px,555px 169px,554px 159px,552px 145px,567px 143px,574px 167px,587px 182px,587px 196px,567px 206px,562px 199px,539px 204px,564px 207px,586px 197px,597px 201px,586px 222px,572px 229px,537px 214px,510px 223px,488px 228px,489px 221px,503px 214px,445px 190px,411px 196px,415px 189px);
+    clip-path: polygon(414px 186px,425px 183px,429px 176px,418px 169px,453px 176px,459px 188px,502px 205px,505px 201px,507px 192px,452px 175px,416px 167px,417px 150px,428px 131px,456px 139px,457px 129px,465px 112px,482px 118px,476px 145px,493px 137px,498px 146px,555px 168px,538px 195px,531px 190px,523px 192px,524px 201px,532px 202px,555px 169px,554px 159px,552px 145px,567px 143px,574px 167px,587px 182px,587px 196px,567px 206px,562px 199px,539px 204px,564px 207px,586px 197px,597px 201px,586px 222px,572px 229px,537px 214px,510px 223px,488px 228px,489px 221px,503px 214px,445px 190px,411px 196px,415px 189px);
+    cursor: pointer;
+}
+
+#FWD-rear-suspension:hover{
+    opacity: 0.0;
+    transition: all 0.1s
+}
+
+
+
+#RWD-rear-suspension{
+    -webkit-clip-path: polygon(416px 162px,419px 153px,421px 141px,428px 134px,433px 131px,456px 141px,463px 129px,466px 117px,479px 113px,484px 122px,473px 144px,496px 139px,501px 147px,557px 171px,551px 152px,559px 144px,572px 148px,579px 176px,585px 183px,583px 195px,597px 208px,597px 216px,573px 229px,537px 215px,515px 226px,487px 230px,490px 218px,503px 214px,491px 210px,473px 197px,472px 191px,488px 190px,500px 201px,507px 192px,525px 191px,523px 201px,562px 209px,567px 205px,550px 198px,533px 204px,535px 195px,528px 191px,530px 181px,518px 178px,515px 171px,484px 175px,473px 174px,458px 175px,439px 181px,416px 170px);
+    clip-path: polygon(416px 162px,419px 153px,421px 141px,428px 134px,433px 131px,456px 141px,463px 129px,466px 117px,479px 113px,484px 122px,473px 144px,496px 139px,501px 147px,557px 171px,551px 152px,559px 144px,572px 148px,579px 176px,585px 183px,583px 195px,597px 208px,597px 216px,573px 229px,537px 215px,515px 226px,487px 230px,490px 218px,503px 214px,491px 210px,473px 197px,472px 191px,488px 190px,500px 201px,507px 192px,525px 191px,523px 201px,562px 209px,567px 205px,550px 198px,533px 204px,535px 195px,528px 191px,530px 181px,518px 178px,515px 171px,484px 175px,473px 174px,458px 175px,439px 181px,416px 170px);    
+    cursor: pointer;
+}
+
+#RWD-rear-suspension_active{
+    -webkit-clip-path: polygon(416px 162px,419px 153px,421px 141px,428px 134px,433px 131px,456px 141px,463px 129px,466px 117px,479px 113px,484px 122px,473px 144px,496px 139px,501px 147px,557px 171px,551px 152px,559px 144px,572px 148px,579px 176px,585px 183px,583px 195px,597px 208px,597px 216px,573px 229px,537px 215px,515px 226px,487px 230px,490px 218px,503px 214px,491px 210px,473px 197px,472px 191px,488px 190px,500px 201px,507px 192px,525px 191px,523px 201px,562px 209px,567px 205px,550px 198px,533px 204px,535px 195px,528px 191px,530px 181px,518px 178px,515px 171px,484px 175px,473px 174px,458px 175px,439px 181px,416px 170px);
+    clip-path: polygon(416px 162px,419px 153px,421px 141px,428px 134px,433px 131px,456px 141px,463px 129px,466px 117px,479px 113px,484px 122px,473px 144px,496px 139px,501px 147px,557px 171px,551px 152px,559px 144px,572px 148px,579px 176px,585px 183px,583px 195px,597px 208px,597px 216px,573px 229px,537px 215px,515px 226px,487px 230px,490px 218px,503px 214px,491px 210px,473px 197px,472px 191px,488px 190px,500px 201px,507px 192px,525px 191px,523px 201px,562px 209px,567px 205px,550px 198px,533px 204px,535px 195px,528px 191px,530px 181px,518px 178px,515px 171px,484px 175px,473px 174px,458px 175px,439px 181px,416px 170px);    
+    cursor: pointer;
+}
+
+#RWD-rear-suspension:hover{
     opacity: 0.0;
     transition: all 0.1s
 }

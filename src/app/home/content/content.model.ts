@@ -2,6 +2,8 @@ export class Content{
     public elemCode:string;
     public parentGrpName: string;
     public elemName: string;
+    public anchorDisplay: boolean;
+
     public youTubeUrl: string;
     public sampleImageUrl: string;
     public explanation: string;
