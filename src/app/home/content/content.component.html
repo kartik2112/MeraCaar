@@ -1,8 +1,13 @@
-<div id="mainCard" class="card" style="">
+<!--
+    Reference for async pipes:
+    https://stackoverflow.com/a/34772772/5370202
+-->
+
+<div id="mainCard" class="card" style="" *ngIf="_data">
     <div class="card-img-top">
         <div class="vid-container">
             <iframe id="youtubeIFrame" style="" 
-                [src]="_videoSafeUrl" 
+                [src]="_videoSafeUrl"
                 frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
             </iframe>
         </div>
@@ -31,7 +36,7 @@
         </div>        
     </div>
 </div>
-<div id="extraImgCard" class="card" style="">
+<div id="extraImgCard" class="card" style="" *ngIf="_data">
     <div class="card-img-top">
         <img id="extraImg" style="height:200px" [src]="_data.sampleImageUrl"/>
     </div>

@@ -1,12 +1,21 @@
 import {Injectable} from '@angular/core'
 
-import {Content} from './content.model'
+import {Content} from './content.model';
+import {ContentPartial} from './contentPartial.model';
 import { Subject } from 'rxjs/Rx';
+
+import { Observable } from 'rxjs/Observable';
+import { of } from 'rxjs/observable/of';
+
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class ContentService{
 
+    constructor(private http: HttpClient){}
+
     private _activeContent$ = new Subject<Content>();
+    private _domainName = "http://localhost:8081";
 
     public observeActiveContent(){
         return this._activeContent$;
@@ -437,11 +446,38 @@ export class ContentService{
     //     });
     // }
 
-    public getContent(elemCode:string):Content{
-        return this._allContent.find(cont => cont.elemCode==elemCode)
+    // public getContent(elemCode:string):Content{
+    //     return this._allContent.find(cont => cont.elemCode==elemCode)
+    // }
+
+    public getContent(elemCode:string):Observable<Content>{
+        // return of(this._allContent.filter( cont => cont.elemCode==elemCode)[0]);
+        return this.http.post<Content>(this._domainName+"/getCarComponentsDetails",{'elemCode':elemCode});
     }
 
-    public getAll():Array<Content>{
-        return this._allContent.filter( cont => cont.anchorDisplay );
+    
+
+    // public getAll():Array<Content>{
+    //     return this._allContent.filter( cont => cont.anchorDisplay );
+    // }
+
+
+    public getAll():Observable<Array<Content>>{
+        // return of(this._allContent.filter( cont => cont.anchorDisplay ));
+        return this.http.get<Array<Content>>(this._domainName+"/listAllCarComponentsDetails");
+    }
+
+    public prefetchBasicAll():Observable<Array<ContentPartial>>{
+        // return of(this._allContent.filter( cont => cont.anchorDisplay ));
+        return this.http.get<Array<ContentPartial>>(this._domainName+"/listAllCarComponentsNames");
+    }
+
+    public getAllCodes():Observable<Array<String>>{
+        // return of(this._allContent.filter( cont => cont.anchorDisplay ));
+        return this.http.get<Array<String>>(this._domainName+"/listAllCarComponentsCodes");
+    }
+
+    public addNewComponent(carData,modificationKey):Observable<String>{
+        return this.http.post<String>(this._domainName+"/addComponentData",{'carData':carData,'modificationKey':modificationKey});
     }
 }

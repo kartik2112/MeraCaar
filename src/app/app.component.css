@@ -1,16 +1,7 @@
 /* @import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah'); */
 
-#particles-js{
-    width: 100vw;
-    height: 100vh;
-    background-color: #021748;
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    position: fixed;
-    z-index: -1;
-}
+
 
 /* #mainIntro{
     background-image: url('../assets/images/introBG2.png');
@@ -99,3 +90,4 @@ body{
     width: 400px;
     height: 400px;
 } */
+

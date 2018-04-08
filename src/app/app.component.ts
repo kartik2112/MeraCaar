@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation  } from '@angular/core';
 
-declare var particlesJS: any;
+
 
 @Component({
   selector: 'my-app',
@@ -13,7 +13,7 @@ declare var particlesJS: any;
 export class AppComponent implements OnInit  {
   
   public ngOnInit() {
-    particlesJS.load('particles-js', '../assets/particles.json', null);
+    
   }
 
 }

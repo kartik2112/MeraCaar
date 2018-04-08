@@ -13,4 +13,10 @@ export class Content{
     public arrow_head_path_d: string;
 
     public soundUrl:string;
+
+    public constructor(){
+        this.elemCode = this.parentGrpName = this.elemName = this.youTubeUrl = this.sampleImageUrl = this.explanation = this.arrow_head_path_d = this.arrow_tail_path_d = "";
+        this.anchorDisplay = true;
+        this.references = [];
+    }
 }

@@ -11,35 +11,60 @@ import { DomSanitizer } from '@angular/platform-browser';
 
 export class ContentComponent implements OnInit{
     
-    private _paramSub: any;
+    // public _paramSub: any;
     private _data:Content;
     private _errorStr:string;
-    private _videoSafeUrl:any
+    private _videoSafeUrl:any;
+    // private _sound:
 
-    constructor(private _route:ActivatedRoute, private _contentService:ContentService, private _sanitizer: DomSanitizer){
+    constructor(private _route:ActivatedRoute, public _contentService:ContentService, private _sanitizer: DomSanitizer){
         
     }
 
     public ngOnInit() {
-        this._paramSub = this._route.params.subscribe(params => {
+        //Reference for fixing problem of nested subscribe
+        //   https://stackoverflow.com/a/37748799/5370202
+        this._route.params
+        .flatMap(params => {
             var elemId:string = params['elem'];
 
-            // this._contentService.getContent(elemId)
-            // .then(comp => this._data = comp)
-            // .catch(err => this._errorStr = err);
+            // console.log("Received param");
+            // console.log(this);
 
-            let tempData = this._contentService.getContent(elemId);
-            if(tempData){
-                this._data = tempData;
-                this._errorStr = "";
-                this._contentService.updateActiveContent(this._data);
-            }
-            else{
-                this._errorStr = "No such content found";
-            }
-
-            this._videoSafeUrl = this._sanitizer.bypassSecurityTrustResourceUrl(this._data.youTubeUrl);  //Reference: https://stackoverflow.com/a/39429498/5370202
+            return this._contentService.getContent(elemId);
         })
+        .subscribe( tempData => {
+                // console.log("Received tempData");
+                // this.updateData(tempData);
+                
+                if(tempData){
+                    // console.log(this._data);
+
+                    this._data = tempData;
+                    this._errorStr = "";
+                    
+                    this._contentService.updateActiveContent(this._data);
+                }
+                else{
+                    this._errorStr = "No such content found";
+                }
+        
+                this._videoSafeUrl = this._sanitizer.bypassSecurityTrustResourceUrl(this._data.youTubeUrl);  //Reference: https://stackoverflow.com/a/39429498/5370202
+        });
+    }
+
+    public updateData(tempData:Content){
+        if(tempData){
+            this._data = tempData;
+            this._errorStr = "";
+            
+            this._contentService.updateActiveContent(this._data);
+        }
+        else{
+            this._errorStr = "No such content found";
+        }
+
+        this._videoSafeUrl = this._sanitizer.bypassSecurityTrustResourceUrl(this._data.youTubeUrl);  //Reference: https://stackoverflow.com/a/39429498/5370202
     }
 
 }
