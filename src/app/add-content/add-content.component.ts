@@ -6,18 +6,21 @@ import {Content} from '../home/content/content.model'
 declare var particlesJS: any;
 
 @Component({
-  selector: 'app-modify-content',
-  templateUrl: './modify-content.component.html',
-  styleUrls: ['./modify-content.component.css']
+  selector: 'app-add-content',
+  templateUrl: './add-content.component.html',
+  styleUrls: ['./add-content.component.css','../app.component.css']
 })
-export class ModifyContentComponent implements OnInit {
+export class AddContentComponent implements OnInit {
   
   private _allCodes:Array<String>;
   private _validCode:boolean=true;
   @ViewChild('ReferencesSection') refSection:ElementRef;
+  @ViewChild('mainForm') mainForm:ElementRef;
   private carData:Content = new Content();
   private modificationKey:string = "";
   private _sendingData:boolean = false;
+  private _successMessage:string;
+  private _waitState:boolean = false;
 
   constructor(public _contentService:ContentService, private _sanitizer: DomSanitizer) {
     this._contentService.getAllCodes()
@@ -61,11 +64,26 @@ export class ModifyContentComponent implements OnInit {
   }
 
   public sendData(){
+    if(this.modificationKey==""){
+      alert("Please enter password before submitting data!");
+      return;
+    }
     this._sendingData = true;
+    this._waitState=true;
     this._contentService.addNewComponent(this.carData,this.modificationKey)
       .subscribe( resp => {
         console.log(resp);
+        // this.mainForm.nativeElement.reset();
         this._sendingData = false;
+        this._allCodes.push(this.carData.elemCode);
+        console.log(this._allCodes);
+        this._successMessage = `${this.carData.elemName}(${this.carData.elemCode}) component has been added to the database`;
+        this.carData = new Content();
+        this._waitState=false;
+        window.scrollTo(0,0);
+        window.setTimeout(function(){
+          this._successMessage = "";
+        },5000);
       });
   }
 }

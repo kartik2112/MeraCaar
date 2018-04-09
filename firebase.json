@@ -1,5 +1,12 @@
 {
+    // Reference: https://www.polymer-project.org/1.0/start/toolbox/deploy
     "hosting": {
-        "public": "dist"
+        "public": "dist",
+        "rewrites": [
+            {
+              "source": "**/!(*.*)",
+              "destination": "/index.html"
+            }
+          ]
     }
 }

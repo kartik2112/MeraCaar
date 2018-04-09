@@ -8,12 +8,13 @@ declare var particlesJS: any;
 
 @Component({
     templateUrl: './home.component.html',
-    styleUrls: ['./home.component.css','./home.carComps.component.css','./content/content.component.css']    
+    styleUrls: ['./home.component.css','./home.carComps.component.css','./content/content.component.css','../app.component.css']    
 })
 
 export class HomeComponent{
     private _allCont:Array<ContentPartial>
-    private dispMode:string = "Sys"
+    private dispMode:string = "Sys";
+    private _domainName:string;
     // private _paramSub:any
     private _childData:Content
     private _errorStr:string
@@ -32,12 +33,13 @@ export class HomeComponent{
 
     constructor(private _route:ActivatedRoute, private _contentService:ContentService, private _router:Router, private cdr:ChangeDetectorRef ){
         // this._allCont = this._contentService.getAll()
-        this._contentService.prefetchBasicAll()
+        this._waitState = true;
+        this._contentService.prefetchBasicAllUnique()
             .subscribe( allCont => {
                 this._allCont = allCont;
                 this._waitState = false;
             });
-        this._waitState = true;
+        this._domainName = this._contentService._domainName;
     }
 
     public ngOnInit() {

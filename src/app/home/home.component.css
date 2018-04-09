@@ -1,14 +1,4 @@
 
-#particles-js{
-    width: 100vw;
-    height: 100vh;
-    background-color: #021748;
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    position: fixed;
-    z-index: -1;
-}
 
 #mainSVG-BG{
     width:60%;
@@ -38,6 +28,16 @@
     left:40px;
     top:80px;
     z-index:20;
+}
+
+.a-pages-btn{
+    position: relative;
+    top: 100px;
+    left: 40px;
+    z-index: 20;
+    font-size: smaller;
+    display: block;
+    width: 180px;    
 }
 
 
@@ -84,43 +84,6 @@ path.flowing {
 
 
 
-.hideBG{
-    filter: blur(3px) brightness(0.8) contrast(1.3);
-}
-
-
-
-
-
-
-#loaderDiv{
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100vw;
-    height: 100vh;
-    z-index: 199;
-}
-
-#tyreLoaderImg{
-    position: fixed;
-    left: calc(50% - 150px);
-    top: calc(50% - 150px);
-    z-index: 200;
-    max-width: 300px;
-    animation: spinningTyre 0.8s linear infinite;
-}
-
-@keyframes spinningTyre{
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(360deg);
-    }
-}
-
-
 
 
 
@@ -153,10 +116,10 @@ path.flowing {
         margin: auto!important;
     }
 
-    #tyreLoaderImg{
-        left: calc(50% - 25vw);
-        top: calc(50% - 25vw);
-        width: 50vw;
+    .a-pages-btn{
+        top: 8px;
+        left: 2.5%;
+        width: 95%; 
     }
 }
 
@@ -190,22 +153,16 @@ path.flowing {
         margin: auto!important;
     }
 
-    #tyreLoaderImg{        
-        left: calc(50% - 20vw);
-        top: calc(50% - 20vw);
-        width: 40vw;
+    .a-pages-btn{
+        top: 8px;
+        left: 5%;
+        width: 90%; 
     }
 }
 
 @media (min-width: 992px) and (max-width: 1200px){    
     #mainSVG-BG{
         zoom: 80%;
-    }
-    
-    #tyreLoaderImg{
-        left: calc(50% - 15vw);
-        top: calc(50% - 15vw);
-        width: 30vw;
     }
 }
 

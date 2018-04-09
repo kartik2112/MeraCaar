@@ -15,7 +15,7 @@ export class Content{
     public soundUrl:string;
 
     public constructor(){
-        this.elemCode = this.parentGrpName = this.elemName = this.youTubeUrl = this.sampleImageUrl = this.explanation = this.arrow_head_path_d = this.arrow_tail_path_d = "";
+        this.elemCode = this.parentGrpName = this.elemName = this.youTubeUrl = this.sampleImageUrl = this.explanation = this.arrow_head_path_d = this.arrow_tail_path_d = this.soundUrl = "";
         this.anchorDisplay = true;
         this.references = [];
     }

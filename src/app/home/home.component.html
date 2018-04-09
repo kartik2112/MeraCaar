@@ -9,11 +9,13 @@
                 <button type="button" class="btn btn-primary" [disabled]="dispMode=='FWD'" (click)="modifyDisplayContents('FWD')">Front Wheel Drive</button>
                 <button type="button" class="btn btn-primary" [disabled]="dispMode=='RWD'" (click)="modifyDisplayContents('RWD')">Rear Wheel Drive</button>
             </div>
+            <a [routerLink]="['../editContent']" class="btn btn-primary a-pages-btn">Modify Components Page</a>
+            <a [routerLink]="['../addContent']" class="btn btn-primary a-pages-btn" style="margin-top: 5px;">Add Component Page</a>
             <div id="searchDiv" style="z-index:15">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="search..." (keydown)="updateSearchQuery(searchQS.value)" #searchQS/>
+                        <input type="text" class="form-control" placeholder="search..." (keydown)="updateSearchQuery(searchQS.value)" (keyup)="updateSearchQuery(searchQS.value)" #searchQS/>
                     </div>
-                    <div id="custom-scrollbar" class="col-centered" style="height:220px;margin:auto;width:100%;overflow-y:scroll;">            
+                    <div id="custom-scrollbar" class="col-centered" style="height:220px;margin:auto;width:100%;overflow-y:scroll;">
                         <li *ngFor="let comp of (_allCont | searchContentPipe:this._searchQueryStr)" >
                                 <a href="" (click)="openComponent(comp.elemCode)">{{ comp.elemName }}</a>
                         </li>
@@ -87,7 +89,7 @@
             </svg>
             <audio src="../../assets/sounds/blop.mp3" #blop></audio>
             <!-- <audio *ngIf="_childData" [src]="_childData.soundUrl" volume="0.2" #audio1 (change)="playAudio1()"></audio> -->
-            <audio *ngIf="_childData" [src]="'http://localhost:8081/sounds/'+_childData.soundUrl" volume="0.2" #audio1 (change)="playAudio1()"></audio>
+            <audio *ngIf="_childData" [src]="_domainName+'/sounds/'+_childData.soundUrl" volume="0.2" #audio1 (change)="playAudio1()"></audio>
             <!-- Site for editing audios: http://mp3cutter.toolur.com/ -->
 
         </div>
@@ -96,7 +98,7 @@
             <router-outlet></router-outlet>
 
         </div>
-        <br/><br/><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kartik Shenoy&copy;<br/>
+        <div style="display:block;height:50px;width:100%;"><br/></div>
         
         
     </div>

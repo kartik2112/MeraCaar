@@ -11,10 +11,11 @@ import {EmptyComponent} from './home/empty.component';
 import {searchContentPipe} from './home/content/content.pipe';
 
 import { HttpClientModule } from '@angular/common/http';
-import { ModifyContentComponent } from './modify-content/modify-content.component';
+import { AddContentComponent } from './add-content/add-content.component';
 
 import {ContentService} from './home/content/content.service'
 import { FormsModule } from '@angular/forms';
+import { EditContentComponent } from './edit-content/edit-content.component';
 
 const appRoutes: Routes = [ 
   // { 
@@ -45,8 +46,12 @@ const appRoutes: Routes = [
     ]
   },
   {
-    path: 'modifyContent',
-    component: ModifyContentComponent
+    path: 'addContent',
+    component: AddContentComponent
+  },
+  {
+    path: 'editContent',
+    component: EditContentComponent
   },
   { 
     path: '', 
@@ -57,7 +62,7 @@ const appRoutes: Routes = [
 
 @NgModule({
   imports:      [ RouterModule.forRoot(appRoutes), BrowserModule, HttpClientModule, FormsModule ],
-  declarations: [ AppComponent, ContentComponent, HomeComponent, EmptyComponent, searchContentPipe, ModifyContentComponent ],
+  declarations: [ AppComponent, ContentComponent, HomeComponent, EmptyComponent, searchContentPipe, AddContentComponent, EditContentComponent ],
   providers: [ContentService],
   exports: [ RouterModule ],
   bootstrap:    [ AppComponent ]

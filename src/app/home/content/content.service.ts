@@ -15,7 +15,8 @@ export class ContentService{
     constructor(private http: HttpClient){}
 
     private _activeContent$ = new Subject<Content>();
-    private _domainName = "http://localhost:8081";
+    // private _domainName = "http://localhost:8081";
+    public _domainName = "https://blooming-garden-90433.herokuapp.com";
 
     public observeActiveContent(){
         return this._activeContent$;
@@ -472,6 +473,11 @@ export class ContentService{
         return this.http.get<Array<ContentPartial>>(this._domainName+"/listAllCarComponentsNames");
     }
 
+    public prefetchBasicAllUnique():Observable<Array<ContentPartial>>{
+        // return of(this._allContent.filter( cont => cont.anchorDisplay ));
+        return this.http.get<Array<ContentPartial>>(this._domainName+"/listAllUniqueCarComponentsNames");
+    }
+
     public getAllCodes():Observable<Array<String>>{
         // return of(this._allContent.filter( cont => cont.anchorDisplay ));
         return this.http.get<Array<String>>(this._domainName+"/listAllCarComponentsCodes");
@@ -479,5 +485,13 @@ export class ContentService{
 
     public addNewComponent(carData,modificationKey):Observable<String>{
         return this.http.post<String>(this._domainName+"/addComponentData",{'carData':carData,'modificationKey':modificationKey});
+    }
+
+    public updateComponent(carData,modificationKey):Observable<String>{
+        return this.http.post<String>(this._domainName+"/updateComponentData",{'carData':carData,'modificationKey':modificationKey});
+    }
+
+    public deleteComponent(elemCode,modificationKey):Observable<String>{
+        return this.http.post<String>(this._domainName+"/deleteComponent",{'elemCode':elemCode,'modificationKey':modificationKey});
     }
 }

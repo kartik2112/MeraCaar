@@ -1,16 +1,19 @@
+
+
 /* @import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah'); */
 
 
-
-/* #mainIntro{
-    background-image: url('../assets/images/introBG2.png');
-    background-repeat: no-repeat;
+#particles-js{
+    width: 100vw;
+    height: 100vh;
+    background-color: #021748;
     background-size: cover;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-} */
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    position: fixed;
+    z-index: -1;
+}
 
 
 html, body{
@@ -23,71 +26,138 @@ body{
   font-family: Arial;
 }
 
-/* svg {
+
+#custom-scrollbar{
+	padding-right: 5px;
+	height:270px; 
+	overflow-y: scroll;
+	font-size: small;
+}
+
+.force-overflow
+{
+	max-height: 250px;
+}
+
+#custom-scrollbar::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+#custom-scrollbar::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+#custom-scrollbar::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #D62929;
+}
+.centerMeForm{
+    width: 90%;
+    max-width:500px;
     display: block;
-    font: 10.5em 'Montserrat';
-    width: 960px;
-    height: 300px;
-    margin: 0 auto;
-} */
-
-/* .text-copy {
-    fill: none;
-    stroke: white;
-    stroke-dasharray: 6% 29%;
-    stroke-width: 5px;
-    stroke-dashoffset: 0%;
-    animation: stroke-offset 5.5s infinite linear;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.21);
+    padding: 20px;
 }
 
-.text-copy:nth-child(1){
-	stroke: #4D163D;
-	animation-delay: -1;
+.youtubeIFrame{
+	width:70%;
+	margin-left:15%;
+	margin-top:10px;
+	/* height:180px; */
+	height: 90%;
 }
 
-.text-copy:nth-child(2){
-	stroke: #840037;
-	animation-delay: -2s;
+.imgFrame{
+    width:70%;
+    margin: auto;
+    display: block;
 }
 
-.text-copy:nth-child(3){
-	stroke: #BD0034;
-	animation-delay: -3s;
+.action-button1{
+    cursor: pointer;
+    border-radius: 50%;
 }
 
-.text-copy:nth-child(4){
-	stroke: #BD0034;
-	animation-delay: -4s;
+.action-button1:hover{
+    color: #000;
+    background-color: #fff;
 }
 
-.text-copy:nth-child(5){
-	stroke: #FDB731;
-	animation-delay: -5s;
+
+.hideBG{
+    filter: blur(3px) brightness(0.8) contrast(1.3);
 }
 
-@keyframes stroke-offset{
-	100% {stroke-dashoffset: -35%;}
-} */
 
 
 
-/* #introBlock{
-    width: 300px;
-    height: 300px;
-    font: 2.5em 'Gloria Hallelujah';
-    position: absolute;
-    right: 250px;
-    color: rgba(255, 255, 255, 0.77);
+
+
+#loaderDiv{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 199;
 }
 
-#introBlockBG{
-    position: absolute;
-    right: 250px;
-    background: url(../assets/images/introBG2.png) no-repeat center center fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: blur(7px) brightness(1.2);
-    width: 400px;
-    height: 400px;
-} */
+#tyreLoaderImg{
+    position: fixed;
+    left: calc(50% - 150px);
+    top: calc(50% - 150px);
+    z-index: 200;
+    max-width: 300px;
+    animation: spinningTyre 0.8s linear infinite;
+}
+
+
+
+@keyframes spinningTyre{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+
+@media (min-width: 0px) and (max-width: 575px){
+    #tyreLoaderImg{
+        left: calc(50% - 25vw);
+        top: calc(50% - 25vw);
+        width: 50vw;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 992px){
+    #tyreLoaderImg{        
+        left: calc(50% - 20vw);
+        top: calc(50% - 20vw);
+        width: 40vw;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px){
+    #tyreLoaderImg{
+        left: calc(50% - 15vw);
+        top: calc(50% - 15vw);
+        width: 30vw;
+    }
+}
+
+
 
