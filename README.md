@@ -1,33 +1,17 @@
 # MeraCaar
 
+This website is used for interacting with a generic car and getting a detailed view of the selected component. The data has been compiled from various sites. This data can also be accessed through a list of components whose data is present. The Angular app is hosted on Firebase, the data is requested via AJAX Requests to the NodeJs App [here](https://github.com/kartik2112/MeraCaarServer) which is hosted on Heroku. The database used is AWS RDS's MySQL database.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.8.
 
 This site can be viewed at:
 [Mera Caar](https://mera-caar.firebaseapp.com/)
 
-## Development server
+## Screenshots
+![SS1](https://github.com/kartik2112/MeraCar/blob/master/SS/SS1.png)
+![SS2](https://github.com/kartik2112/MeraCar/blob/master/SS/SS2.png)
+![SS3](https://github.com/kartik2112/MeraCar/blob/master/SS/SS3.png)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 ## References:
 
