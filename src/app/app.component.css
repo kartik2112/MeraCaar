@@ -15,6 +15,14 @@
     z-index: -1;
 }
 
+#no-particles-bg{
+    width: 100vw;
+    height: 100vh;
+    background-color: #021748;
+    position: fixed;
+    z-index: -2;
+}
+
 
 html, body{
   height: 100%;
@@ -141,6 +149,10 @@ body{
         top: calc(50% - 25vw);
         width: 50vw;
     }
+
+    #particles-js{
+        display: none;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 992px){
@@ -148,6 +160,10 @@ body{
         left: calc(50% - 20vw);
         top: calc(50% - 20vw);
         width: 40vw;
+    }
+
+    #particles-js{
+        display: none;
     }
 }
 

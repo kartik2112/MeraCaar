@@ -82,7 +82,12 @@ export class HomeComponent{
             this._startAnim = false;
             this._waitState = true;
             console.log("waitState made ",this._waitState);
-        }        
+        }
+        else if(!this._childData){
+            this._startAnim = false;
+            this._waitState = true;
+            console.log("waitState made ",this._waitState);
+        }
         this._router.navigate(['.',component],{relativeTo: this._route});
         return false;
     }
