@@ -1,6 +1,6 @@
 # MeraCaar
 
-This website is used for interacting with a generic car and getting a detailed view of the selected component. The data has been compiled from various sites. This data can also be accessed through a list of components whose data is present. The Angular app is hosted on Firebase, the data is requested via AJAX Requests to the NodeJs App [here](https://github.com/kartik2112/MeraCaarServer) which is hosted on Heroku. The database used is AWS RDS's MySQL database.
+This website is used for interacting with a generic car and getting a detailed view of the selected component. The data has been compiled from various sites. This data can also be accessed through a list of components whose data is present. The Angular app is hosted on Firebase, the data is requested via AJAX Requests to the NodeJs App [here](https://github.com/kartik2112/MeraCaarServer) which is hosted on Heroku. This web service has been published at: [Mera Caar API | Programmable Web](https://www.programmableweb.com/api/mera-caar) and the interface details can be found at [MeraCaar Server API Details](https://kartik2112.github.io/MeraCaarServer/). The database used is AWS RDS's MySQL database.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.8.
 
